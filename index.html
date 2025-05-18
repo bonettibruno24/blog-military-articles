@@ -10,17 +10,25 @@
       rel="stylesheet"
       href="styles.css"
     />
-    <script type="module" src="main.js"></script>
+    <script
+      type="module"
+      src="main.js"
+    ></script>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="bg-white text-center">
+  <body class="bg-white text-center overflow-x-hidden">
     <!-- Componente do Header -->
-    <div id="header-container"></div>
 
-    <section class="space-y-10">
-      <div class="flex space-y-8 w-[1150px] justify-center items-center mx-auto">
-        <div class="flex justify-center items-center flex-row pt-52  bg-white space-x-6">
-          <article class="flex flex-col ">
+    <div id="header-container"></div>
+   
+    <section class="p-2">
+      <div
+        class="flex space-y-8  md:justify-center md:items-center mx-auto"
+      >
+        <div
+          class="flex justify-center lg:w-[1150px] flex-col lg:flex-row lg:pt-52  bg-white"
+        >
+          <article class="flex flex-col">
             <div class="w-full relative">
               <a
                 href="https://www.sociedademilitar.com.br/2025/05/nova-debandada-de-pilotos-da-fab-lista-inclui-oficial-pioneira-piloto-do-helicoptero-caracal-que-atuou-em-brumadinho.html"
@@ -45,12 +53,10 @@
             </div>
 
             <!-- Conteúdo do post -->
-            <div
-              class="py-10 flex flex-col justify-between font-roboto gap-5"
-            >
-              <div class="text-start">
+            <div class="lg:py-10 flex flex-col justify-between font-roboto gap-5">
+              <div class="text-start ">
                 <h3
-                  class="p-0 text-3xl font-bold font-roboto text-slate-950 leading-normal tracking-wide"
+                  class="py-3 lg:text-3xl text-xl font-bold font-roboto text-slate-950 lg:leading-normal leading-tight lg:tracking-wide trackin"
                 >
                   <a
                     href="https://www.sociedademilitar.com.br/2025/05/nova-debandada-de-pilotos-da-fab-lista-inclui-oficial-pioneira-piloto-do-helicoptero-caracal-que-atuou-em-brumadinho.html"
@@ -63,7 +69,7 @@
 
                 <!-- Metadados -->
                 <div
-                  class="flex flex-row justify-start items-center text-sm text-gray-500 space-x-7"
+                  class="flex flex-row justify-start items-center lg:text-sm text-xs text-gray-500 space-x-7"
                 >
                   <span>
                     por
@@ -94,75 +100,27 @@
                   Ler mais<span class="sr-only"> detalhes</span>
                 </a>
               </div>
-              <!-- <div class="flex w-14 h-20 bg-red-700"></div> -->
-
-                <!-- Conteudos abaixo(inferior) de ler mais -->
-              <div class="grid grid-cols-2">
-                <article class="bg-white rounded-lg shadow p-4 text-start p-">
-                  <h3 class="text-sm font-bold text-gray-800 tracking-wide">
-                    <a
-                      href="https://www.sociedademilitar.com.br/2025/05/os-contracheques-dos-militares-surpreenda-se-ao-saber-quanto-recebe-um-sargento-das-forcas-armadas-brasileiras.html"
-                      class="flex items-start gap-2"
-                    >
-                    <span class="text-[10px] text-blue-600">▶</span>
-                      Os contracheques dos militares: surpreenda-se ao saber
-                      quanto recebe um sargento das Forças Armadas brasileiras
-                    </a>
-                  </h3>
-                </article>
-                <article class="bg-white rounded-lg shadow p-4 text-start">
-                  <h3 class="text-sm font-bold text-gray-800 tracking-wide">
-                    <a
-                      href="https://www.sociedademilitar.com.br/2025/05/concurso-da-esa-2025-uma-chance-de-ouro-para-jovens-entre-17-e-26-anos-que-sonham-com-a-carreira-militar-e-estabilidade-cvc.html"
-                      class="flex items-start gap-2"
-                    >
-                    <span class="text-[10px] text-blue-600">▶</span>
-                      Concurso da ESA 2025: uma chance de ouro para jovens entre
-                      17 e 26 anos que sonham com a carreira militar e
-                      estabilidade do Exército
-                    </a>
-                  </h3>
-                </article>
-                <article class="bg-white rounded-lg shadow p-4 text-start">
-                  <h3 class="text-sm font-bold text-gray-800 tracking-wide">
-                    <a
-                      href="https://www.sociedademilitar.com.br/2025/05/video-comandantes-sao-pressionados-pelo-governo-para-para-concordar-com-aumento-da-idade-limite-para-a-reserva-remunerada-e-fim-da-morte-ficta.html"
-                      class="flex items-start gap-2"
-                    >
-                    <span class="text-[10px] text-blue-600">▶</span>
-                      Vídeo: comandantes são pressionados pelo governo para
-                      concordar com aumento da idade limite para a reserva
-                      remunerada e fim da morte ficta
-                    </a>
-                  </h3>
-                </article>
-                <article class="bg-white rounded-lg shadow p-4 text-start">
-                  <h3 class="text-sm font-bold text-gray-800 tracking-wide">
-                    <a
-                      href="https://www.sociedademilitar.com.br/2025/05/exercito-reformula-doutrina-dos-kids-pretos-integracao-com-etica-operacoes-psicologicas-e-aquisicao-de-blindados-urbanos.html"
-                      class="flex items-start gap-2"
-                    >
-                      <span class="text-[10px] text-blue-600">▶</span>
-                      Exército reformula doutrina dos Kids Pretos: aulas de ética, noções de
-                      operações psicológicas e aquisição de "blindados urbanos"
-                    </a>
-                  </h3>
-                </article>
-              </div>
             </div>
           </article>
           <!-- Conteudo lateral direito  -->
-          <div class="flex w-full flex-col rounded-sm border border-gray-300 text-center space-x-2">
-            <div id="text-articles-container" class="flex w-full flex-col rounded-sm border border-gray-300 text-center space-y-2"></div>
+          <div
+            class="flex w-full flex-col rounded-sm text-center pt-5 lg:pt-0">
+            <div
+              id="text-articles-container"
+              class="flex w-full flex-col md:grid md:grid-cols-2 lg:flex lg:flex-col lg:rounded-sm lg:border lg:border-gray-300  space-y-2"
+            ></div>
           </div>
         </div>
       </div>
-      <section class="flex w-[1150px] justify-center mx-auto items-center ">
-           <div id="articles-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"></div>
+      <!-- Artigos/Categoria  -->
+      <section class="flex lg:w-[1150px] justify-center mx-auto items-center pt-14">
+        <div
+          id="articles-container"
+          class="lg:grid sm:grid-col-2 sm:grid  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+        ></div>
       </section>
-
       <footer>
-       <div id="footer-container" ></div>
+        <div id="footer-container"></div>
       </footer>
     </section>
   </body>

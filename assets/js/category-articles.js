@@ -21,17 +21,6 @@ export const articles = [
     paragraph:
       'A força aérea brasileira figura entre as 25 mais poderosas do mundo em 2025, segundo os rankings do World Directory of Modern Military Aircraft (WDMMA) e do Global Fire Power, com destaque absoluto na América Latina. As listas avaliam a...'
   },
-  {
-    title: 'Nova debandada de pilotos da FAB: lista inclui oficial pioneira...',
-    link: 'https://www.sociedademilitar.com.br/2025/05/nova-debandada-de-pilotos-da-fab-lista-inclui-oficial-pioneira-piloto-do-helicoptero-caracal-que-atuou-em-brumadinho.html',
-    imgSrc:
-      'https://www.sociedademilitar.com.br/wp-content/uploads/2025/05/Imagem-com-militar-afundando-junto-de-bilhete-de-pagamento-de-sargento-750x469.jpg',
-    imgAlt:
-      'Imagem com militar afundando junto de bilhete de pagamento de sargento',
-    category: 'Forças Armadas',
-    paragraph:
-      'A força aérea brasileira figura entre as 25 mais poderosas do mundo em 2025, segundo os rankings do World Directory of Modern Military Aircraft (WDMMA) e do Global Fire Power, com destaque absoluto na América Latina. As listas avaliam a...'
-  },
   // Adicione mais objetos conforme necessário
 ]
 

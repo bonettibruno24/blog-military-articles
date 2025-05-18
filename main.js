@@ -1,9 +1,9 @@
-import { articlesData, renderArticles } from './articles-data.js';
-import {textArticles, renderRecentArticles} from './recent-articles.js'
-import { renderHeader } from './header-component.js';
-import { renderFooter } from './footer-component.js';
-import { categoryArticle, articles } from './category-articles.js';
-import { searchArticles, searchListArticles } from './search-list-articles.js';
+import { articlesData, renderArticles } from './assets/js/classified-articles.js';
+import {textArticles, renderRecentArticles} from './assets/js/recent-articles.js'
+import { renderHeader } from './assets/js/header-component.js';
+import { renderFooter } from './assets/js/footer-component.js';
+import { categoryArticle, articles } from './assets/js/category-articles.js';
+import { searchArticles, searchListArticles } from './assets/js/search-list-articles.js';
 
 
 document.addEventListener('DOMContentLoaded', () => {

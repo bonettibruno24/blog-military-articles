@@ -50,7 +50,7 @@ export const textArticles = [
   
     data.forEach(item => {
       const articleHTML = `
-        <article class="bg-white rounded-lg shadow p-4 text-start">
+        <article class="bg-white rounded-lg shadow lg:p-4 text-start">
           <h3 class="text-sm font-bold text-gray-800 tracking-wide">
             <a href="${item.url}" class="flex items-start gap-2">
               <span class="text-[10px] text-blue-600">▶</span>

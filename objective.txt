@@ -1,6 +1,0 @@
-MODELOS DE PÁGINAS
-
-- Página inicial
-- Artigo (https://www.sociedademilitar.com.br/2025/05/os-contracheques-dos-militares-surpreenda-se-ao-saber-quanto-recebe-um-sargento-das-forcas-armadas-brasileiras.html)
-- Categorias (https://www.sociedademilitar.com.br/category/forcas-armadas-policia)
-- Resultado de busca (https://www.sociedademilitar.com.br/?s=militar)

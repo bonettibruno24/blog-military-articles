@@ -1,0 +1,503 @@
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta
+      name="description"
+      content="Blog Militar - Artigos e notícias sobre o mundo militar"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="../styles.css"
+    />
+    <link href="./output.css" rel="stylesheet">
+    <script
+      type="module"
+      src="../main.js"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Blog Militar</title>
+  </head>
+  <body>
+     <!-- Bloco Header/Logo(img) -->
+     <header>
+      <div
+        class="w-full lg:max-h-32 hidden lg:justify-center lg:items-center lg:flex bg-white"
+      >
+        <div class="flex items-center justify-between">
+          <div class="flex w-full">
+            <a
+              href="https://www.sociedademilitar.com.br/"
+              aria-label="Visit Homepage"
+            >
+              <img
+                class="h-28"
+                src="https://www.sociedademilitar.com.br/wp-content/uploads/2025/02/logo-azul-escuro-sociedade-militar.webp"
+                srcset="
+                  https://www.sociedademilitar.com.br/wp-content/uploads/2025/02/logo-azul-escuro-sociedade-militar.webp 1x,
+                  https://www.sociedademilitar.com.br/wp-content/uploads/2025/02/logo-azul-escuro-sociedade-militar.webp 2x
+                "
+                alt="RSM - Revista Sociedade Militar"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="w-full hi bg-white shadow flex items-center">
+      <div
+        class="bg-gray-900 lg:flex w-full text-white lg:justify-center lg:items-center shadow-md p-4"
+      >
+        <div
+          class="flex flex-row lg:w-[1150px] md:flex-row justify-between items-center py-1 gap-20"
+        >
+          <div
+            class="flex justify font-semibold-center md:justify-start w-full md:w-auto"
+          >
+            <a
+              href="#"
+              aria-label="Show Menu"
+              class="flex flex-col gap-1"
+            >
+              <span class="block w-6 h-0.5 bg-white"></span>
+              <span class="block w-6 h-0.5 bg-white"></span>
+              <span class="block w-6 h-0.5 bg-white"></span>
+            </a>
+          </div>
+
+          <!-- Logo Mobile -->
+          <div class="flex justify-center w-full lg:w-auto lg:hidden">
+            <img
+              class="max-w-[100px] h-auto"
+              src="https://www.sociedademilitar.com.br/wp-content/uploads/2025/02/logo-branco-fundo-azul-sociedade-militar-25.png"
+              alt="Logo Sociedade Militar"
+            />
+          </div>
+
+          <!-- Ícone de busca -->
+          <div class="flex lg:justify-end w-full md:w-auto lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-5 h-5 text-white"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z"
+              />
+            </svg>
+          </div>
+          <div class="hidden justify-end items-end lg:flex p-2 font-roboto font-extrabold">
+            <ul
+              class="lg:justify-end items-end text-sm space-x-4  hidden md:flex"
+            >
+            <!-- Botão Para Live de Eventos(AO VIVO) -->
+              <!-- <li>
+                <a
+                  href="https://www.sociedademilitar.com.br/aovivo"
+                  class="px-2 py-1 bg-red-600 text-white rounded"
+                >
+                  AO VIVO
+                </a>
+              </li> -->
+              <li>
+                <a
+                  href="https://www.sociedademilitar.com.br/militares-forcas-armadas-seguranca-publica-defesa-e-geopolitica"
+                  class="hover:text-gray-300"
+                  >Página Inicial</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.sociedademilitar.com.br/ultimas-noticias"
+                  class="hover:text-gray-300"
+                  >Últimas Notícias</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.sociedademilitar.com.br/category/forcas-armadas-policia"
+                  class="hover:text-gray-300"
+                  >Forças Armadas</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.sociedademilitar.com.br/category/c34-geopolitica-internacional-defesa-etc"
+                  class="hover:text-gray-300"
+                  >Defesa e Segurança</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.sociedademilitar.com.br/category/setores-estrategicos"
+                  class="hover:text-gray-300"
+                  >Setores Estratégicos</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.sociedademilitar.com.br/category/concursos"
+                  class="hover:text-gray-300"
+                  >Concursos e Cursos</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.sociedademilitar.com.br/category/gente-militar-familia"
+                  class="hover:text-gray-300"
+                  >Gente e Cultura</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+      <!-- Fim do Header -->
+
+      <main class="font-roboto p-2">
+        <div class="flex space-y-8 md:justify-center md:items-center mx-auto">
+          <div class="flex justify-center items-start lg:w-[1000px] xl:w-[1150px] flex-col lg:flex-row lg:pt-52 bg-white space-x-3">
+          <article class="flex flex-col md:w-[720px] ">
+            <div class="text-sm text-gray-600 ">
+                <div class="flex items-start justify-start space-x-2">
+                  <span>
+                    <a
+                      href="https://www.sociedademilitar.com.br"
+                      class="hover:underline"
+                    >
+                      Início
+                    </a>
+                  </span>
+                  <span class="text-gray-400">&gt;</span>
+                  <span>
+                    <a
+                      href="https://www.sociedademilitar.com.br/category/destaque"
+                      class="hover:underline"
+                    >
+                      Destaque
+                    </a>
+                  </span>
+                </div>
+              </div>
+            <div class=" flex flex-col  justify-between  pt-5">
+              <div class="text-start space-y-4">
+                <h3
+                  class="p-0 text-3xl font-bold text-slate-950 tracking-tighter"
+                >
+                  <a
+                    href="https://www.sociedademilitar.com.br/2025/05/nova-debandada-de-pilotos-da-fab-lista-inclui-oficial-pioneira-piloto-do-helicoptero-caracal-que-atuou-em-brumadinho.html"
+                  >
+                    Nova debandada de pilotos da FAB: lista inclui oficial
+                    pioneira, piloto do Helicóptero Caracal que atuou em
+                    Brumadinho
+                  </a>
+                </h3>
+                <div class="">
+                   <h2 class="text-grayCustom md:text-xl text-lg font-normal opacity-45">
+                    Mesmo com reajuste, salário dos militares das Forças Armadas fica abaixo do que recebe a maior parte das categorias do governo federa
+                   </h2>
+                </div>
+
+                <div
+                  class="flex flex-row justify-between items-center text-sm text-gray-500 space-x-2"
+                >
+                  <div class="flex justify-start items-center space-x-3">
+                    <span>
+                      por
+                      <a
+                        href="https://www.sociedademilitar.com.br/author/smbr"
+                        class="text-blue-600 font-semibold text-xs hover:underline"
+                        >Sociedade Militar</a
+                      >
+                    </span>
+                    <span class="inline-block w-2 h-0.5 bg-[#a0a0a0] align-middle"></span>
+  
+                    <span>
+                      <a
+                        href="https://www.sociedademilitar.com.br/2025/05/nova-debandada-de-pilotos-da-fab-lista-inclui-oficial-pioneira-piloto-do-helicoptero-caracal-que-atuou-em-brumadinho.html"
+                      >
+                        07/05/2025
+                      </a>
+                    </span>
+
+                  </div>
+                  <div class="flex justify-end items-center space-x-4 p-2">
+                    <div class="relative group" data-in-step="3" data-out-step="2">
+                      <div class="flex items-center space-x-1 cursor-pointer select-none">
+                        <span class="text-sm font-medium">A</span>
+                        <span class="text-xl font-bold">A</span>
+                      </div>               
+
+                      <div class="absolute right-0 mt-2 hidden group-hover:block bg-white border border-gray-200 shadow-lg rounded-md z-10 p-4 min-w-[200px]">
+                        <div class="flex flex-col items-center ">
+                      
+                          <div class="flex space-x-2">
+                            <button class="px-2 py-1 text-sm bg-gray-200 hover:bg-gray-300 rounded" aria-label="Diminuir Zoom">A−</button>
+                            <button class="px-2 py-1 text-base bg-gray-200 hover:bg-gray-300 rounded" aria-label="Aumentar Zoom">A+</button>
+                          </div>                 
+                          <div class="w-full h-2 bg-gray-100 rounded-full overflow-hidden">
+                            <div class="h-full bg-blue-500 w-1/2"></div>
+                          </div>                  
+                          <button class="text-sm text-blue-600 hover:underline mt-2">Resetar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex justify-end items-center pt-5">
+                <a
+                  href="https://www.sociedademilitar.com.br/2025/05/nova-debandada-de-pilotos-da-fab-lista-inclui-oficial-pioneira-piloto-do-helicoptero-caracal-que-atuou-em-brumadinho.html"
+                >
+                  <img fetchpriority="high" width="960" height="469" src="https://www.sociedademilitar.com.br/wp-content/uploads/2025/05/Imagem-com-militar-afundando-junto-de-bilhete-de-pagamento-de-sargento-750x469.jpg" alt="Imagem com militar afundando junto de bilhete de pagamento de sargento" decoding="async"/>
+                  <p class="text-end text-grayCustom text-xs font-normal opacity-45">Imagem com militar afundando junto de bilhete de pagamento de sargento</p>
+                </a>
+              </div>
+              
+            </div>
+
+            
+              <!-- Inicio do conteudo texto/imagens principal -->
+              <div class="content-inner jeg_link_underline text-grayGelato text-lg font-normal opacity-70">
+                <p >Após o <a href="https://www.sociedademilitar.com.br/2025/04/comissao-para-analisar-reajuste-dos-militares-foi-instalada-e-tem-dois-generais-no-comando.html" class="text-blue-600 hover:underline">reajuste em duas parcelas</a> concedido pelo governo federal, os salários dos militares do Exército, Marinha e Força Aérea permaneceram abaixo das remunerações recebidas pela maior parte das categorias ligadas ao serviço público federal, legislativo e judiciário.</p>
+              
+                <div class="my-4 text-center">
+                  <div class="code-block code-block-8 ai-track" data-ai='WzgsMCwiTW9iaWxlIENvbnRlbnQgMiIsIiIsMV0=' style="margin: 8px auto; text-align: center; display: block; clear: both; width: 336px; height: 280px; background-color: rgb(244, 244, 244);">
+                    <div data-premium="" data-adunit="SOCIEDADE_MILITAR_TEXTO2" data-sizes-desktop="[[336,280],[300,250]]" data-sizes-mobile="[[336,280],[300,250]]"></div>
+                  </div>
+                </div>
+              
+                <div class="space-y-6">
+
+                    <p class="">
+                      O salário inicial de um policial legislativo está na casa dos 19 mil reais. Um técnico legislativo empregado na 
+                      <a href="https://www2.camara.leg.br/transparencia/recursos-humanos/remuneracao/tabelas-de-remuneracao/tabelacargoefetivo" class="text-blue-600 hover:underline">
+                        Câmara dos Deputados
+                      </a>, recém contratado, tem também salário na casa dos 19 mil reais.
+                    </p>
+                  
+                    <div class="flex justify-center">
+                      <picture>
+                        <source srcset="https://www.sociedademilitar.com.br/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2025/05/Salario-na-Camara-dos-Deputados-620x271.png.webp 620w, https://www.sociedademilitar.com.br/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2025/05/Salario-na-Camara-dos-Deputados-940x412.png.webp 940w, https://www.sociedademilitar.com.br/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2025/05/Salario-na-Camara-dos-Deputados-300x131.png.webp 300w" type="image/webp">
+                        <img src="https://www.sociedademilitar.com.br/wp-content/uploads/2025/05/Salario-na-Camara-dos-Deputados-620x271.png"
+                          alt="Salário na Câmara dos Deputados" class="max-w-full h-auto" width="670" height="293">
+                      </picture>
+                    </div>
+                  
+                    <h2 class="text-3xl font-bold text-slate-950 tracking-tighter">O salário dos sargentos das Forças Armadas e a jornada de trabalho</h2>
+                  
+                    <p class=" ">
+                      Os salários dos militares das Forças Armadas são formados por soldos, vantagens e descontos. A partir de abril de 2015 foi incorporado aos salários um reajuste de 4.5% concedido pelo governo Federal através de medida provisória.
+                    </p>
+                  
+                    <div class="my-4 text-center bg-gray-100 w-[336px] h-[280px] mx-auto flex items-center justify-center">
+                      <!-- Bloco de anúncio -->
+                      <div class="ai-lazy" data-code="..."></div>
+                    </div>
+                  
+                    <p>
+                      Composição do salário do terceiro-sargento:
+                      I – soldo; II – adicional militar; III – adicional de habilitação; IV – adicional de compensação por disponibilidade militar, observado o disposto no art. 8º desta Lei;
+                      V – adicional de tempo de serviço, observado o disposto no art. 30 da Medida Provisória nº 2.215-10, de 31 de agosto de 2001;
+                      VI – adicional de compensação orgânica; e VII – adicional de permanência.
+                    </p>
+                  
+                    <p>
+                      O soldo do sargento do Exército, após o reajuste de abril de 2025, passou para o valor de R$ 3.997,00. Alguns dos militares na graduação de terceiro-sargento recebem adicionais de habilitação no percentual de 45% sobre os soldos, adicional de compensação por disponibilidade militar no percentual de 6% e adicional militar de 16%.
+                    </p>
+                  
+                    <figure class="mx-auto w-full max-w-[620px] text-center">
+                      <picture>
+                        <source srcset="https://www.sociedademilitar.com.br/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2025/05/Salario-de-um-terceiro-sargento-da-Marinha-do-Brasil-620x388.jpg.webp 620w" type="image/webp">
+                        <img src="https://www.sociedademilitar.com.br/wp-content/uploads/2025/05/Salario-de-um-terceiro-sargento-da-Marinha-do-Brasil-620x388.jpg"
+                          alt="Bilhete de pagamento salário de sargento da marinha"
+                          class="mx-auto w-full h-auto"
+                          width="620" height="388">
+                      </picture>
+                      <figcaption class="text-sm text-gray-600 mt-2">Salário de sargento da Marinha em abril de 2025</figcaption>
+                    </figure>
+                  
+                    <p>
+                      Os descontos para o fundo de saúde, imposto de renda retido na fonte e seguro de vida obrigatório somam geralmente um valor na casa dos 1.6 mil reais. Ao final de tudo isso, um militar na graduação de terceiro-sargento na Marinha do Brasil, Exército ou Força Aérea recebe valores na casa dos 5.4 mil reais, podendo variar pra mais ou menos em cerca de 300 reais, a depender do número de dependentes, dos cursos realizados etc.
+                    </p>
+                  
+                    <div class="my-4 text-center bg-gray-100 w-[336px] h-[280px] mx-auto flex items-center justify-center">
+                      <!-- Bloco de anúncio -->
+                      <div class="ai-lazy" data-code="..."></div>
+                    </div>
+                  
+                    <p>
+                      A jornada de trabalho de um terceiro-sargento, se estiver em uma escala de serviço 4×1, pode ser na faixa de 64 horas semanais, cerca de 50% acima da jornada estipulada para um trabalhador civil.
+                    </p>
+                  
+                    <p>
+                      Em dezembro de 2024 o governo federal apresentou um 
+                      <a href="https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2480445" class="text-blue-600 hover:underline">
+                        projeto de lei
+                      </a> com proposta de mudanças em regras estabelecidas para os militares das Forças Armadas. Em redes sociais a discussão entre membros da tropa é quase sempre em torno dos valores do salário e do possível aumento da idade limite para a transferência para a reserva remunerada. Se a proposta do governo for aceita há expectativa de que muitos militares peçam demissão por conta da conjunção negativa <em>salário baixo + aposentadoria tardia</em>.
+                    </p>
+                  
+                    <p>
+                      <a href="https://www.sociedademilitar.com.br/" class="text-blue-600 hover:underline">Revista Sociedade Militar</a>
+                    </p>
+                  
+                    <div class="my-4 text-center bg-gray-100 w-[336px] h-[280px] mx-auto flex items-center justify-center">
+                      <!-- Bloco de anúncio -->
+                      <div class="ai-lazy" data-code="..."></div>
+                    </div>
+                  </div>
+          </article>
+
+          <!-- Conteudo lateral direito  -->
+          <div class="flex  lg:w-96 flex-col md:space-y-5 ">
+              <div class="md:px-8">
+                  <h1 class="font-normal text-blackRecent ">Artigos Recentes</h1>
+                  <div class="h-[2px] w-[40px] bg-blue-500 mt-2"></div>
+              </div>
+              <div class="flex w-full flex-col text-center space-y-2">
+                <article style="background-color: white; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06); padding: 1rem; text-align: start;">
+                  <h3 style="font-size: 0.875rem; font-weight: bold; color: #1f2937; letter-spacing: 0.05em;">
+                    <a href="https://www.sociedademilitar.com.br/2025/05/exercito-reformula-doutrina-dos-kids-pretos-integracao-com-etica-operacoes-psicologicas-e-aquisicao-de-blindados-urbanos.html" style="display: flex; align-items: flex-start; gap: 0.5rem; text-decoration: none;">
+                      <span style="font-size: 10px; color: #2563eb;">▶</span>
+                      Exército reformula doutrina dos Kids Pretos: aulas de ética, noções de operações psicológicas e aquisição de "blindados urbanos"
+                    </a>
+                  </h3>
+                </article>
+                <article style="background-color: white; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06); padding: 1rem; text-align: start;">
+                  <h3 style="font-size: 0.875rem; font-weight: bold; color: #1f2937; letter-spacing: 0.05em;">
+                    <a href="https://www.sociedademilitar.com.br/2025/05/exercito-reformula-doutrina-dos-kids-pretos-integracao-com-etica-operacoes-psicologicas-e-aquisicao-de-blindados-urbanos.html" style="display: flex; align-items: flex-start; gap: 0.5rem; text-decoration: none;">
+                      <span style="font-size: 10px; color: #2563eb;">▶</span>
+                      Exército reformula doutrina dos Kids Pretos: aulas de ética, noções de operações psicológicas e aquisição de "blindados urbanos"
+                    </a>
+                  </h3>
+                </article>
+                <article style="background-color: white; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06); padding: 1rem; text-align: start;">
+                  <h3 style="font-size: 0.875rem; font-weight: bold; color: #1f2937; letter-spacing: 0.05em;">
+                    <a href="https://www.sociedademilitar.com.br/2025/05/exercito-reformula-doutrina-dos-kids-pretos-integracao-com-etica-operacoes-psicologicas-e-aquisicao-de-blindados-urbanos.html" style="display: flex; align-items: flex-start; gap: 0.5rem; text-decoration: none;">
+                      <span style="font-size: 10px; color: #2563eb;">▶</span>
+                      Exército reformula doutrina dos Kids Pretos: aulas de ética, noções de operações psicológicas e aquisição de "blindados urbanos"
+                    </a>
+                  </h3>
+                </article>
+                <article style="background-color: white; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06); padding: 1rem; text-align: start;">
+                  <h3 style="font-size: 0.875rem; font-weight: bold; color: #1f2937; letter-spacing: 0.05em;">
+                    <a href="https://www.sociedademilitar.com.br/2025/05/exercito-reformula-doutrina-dos-kids-pretos-integracao-com-etica-operacoes-psicologicas-e-aquisicao-de-blindados-urbanos.html" style="display: flex; align-items: flex-start; gap: 0.5rem; text-decoration: none;">
+                      <span style="font-size: 10px; color: #2563eb;">▶</span>
+                      Exército reformula doutrina dos Kids Pretos: aulas de ética, noções de operações psicológicas e aquisição de "blindados urbanos"
+                    </a>
+                  </h3>
+                </article>
+                <article style="background-color: white; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06); padding: 1rem; text-align: start;">
+                  <h3 style="font-size: 0.875rem; font-weight: bold; color: #1f2937; letter-spacing: 0.05em;">
+                    <a href="https://www.sociedademilitar.com.br/2025/05/exercito-reformula-doutrina-dos-kids-pretos-integracao-com-etica-operacoes-psicologicas-e-aquisicao-de-blindados-urbanos.html" style="display: flex; align-items: flex-start; gap: 0.5rem; text-decoration: none;">
+                      <span style="font-size: 10px; color: #2563eb;">▶</span>
+                      Exército reformula doutrina dos Kids Pretos: aulas de ética, noções de operações psicológicas e aquisição de "blindados urbanos"
+                    </a>
+                  </h3>
+                </article>
+                <article style="background-color: white; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06); padding: 1rem; text-align: start;">
+                  <h3 style="font-size: 0.875rem; font-weight: bold; color: #1f2937; letter-spacing: 0.05em;">
+                    <a href="https://www.sociedademilitar.com.br/2025/05/exercito-reformula-doutrina-dos-kids-pretos-integracao-com-etica-operacoes-psicologicas-e-aquisicao-de-blindados-urbanos.html" style="display: flex; align-items: flex-start; gap: 0.5rem; text-decoration: none;">
+                      <span style="font-size: 10px; color: #2563eb;">▶</span>
+                      Exército reformula doutrina dos Kids Pretos: aulas de ética, noções de operações psicológicas e aquisição de "blindados urbanos"
+                    </a>
+                  </h3>
+                </article>
+                <article style="background-color: white; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06); padding: 1rem; text-align: start;">
+                  <h3 style="font-size: 0.875rem; font-weight: bold; color: #1f2937; letter-spacing: 0.05em;">
+                    <a href="https://www.sociedademilitar.com.br/2025/05/exercito-reformula-doutrina-dos-kids-pretos-integracao-com-etica-operacoes-psicologicas-e-aquisicao-de-blindados-urbanos.html" style="display: flex; align-items: flex-start; gap: 0.5rem; text-decoration: none;">
+                      <span style="font-size: 10px; color: #2563eb;">▶</span>
+                      Exército reformula doutrina dos Kids Pretos: aulas de ética, noções de operações psicológicas e aquisição de "blindados urbanos"
+                    </a>
+                  </h3>
+                </article>
+                <article style="background-color: white; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06); padding: 1rem; text-align: start;">
+                  <h3 style="font-size: 0.875rem; font-weight: bold; color: #1f2937; letter-spacing: 0.05em;">
+                    <a href="https://www.sociedademilitar.com.br/2025/05/exercito-reformula-doutrina-dos-kids-pretos-integracao-com-etica-operacoes-psicologicas-e-aquisicao-de-blindados-urbanos.html" style="display: flex; align-items: flex-start; gap: 0.5rem; text-decoration: none;">
+                      <span style="font-size: 10px; color: #2563eb;">▶</span>
+                      Exército reformula doutrina dos Kids Pretos: aulas de ética, noções de operações psicológicas e aquisição de "blindados urbanos"
+                    </a>
+                  </h3>
+                </article>
+          </div>
+        </div>
+          </div>
+        </div>
+      </div>
+    </main>
+      <footer>
+        <div class="max-w-7xl mx-auto px-4">
+          <div
+            class="flex flex-col lg:flex-row lg:justify-between lg:items-start space-y-6"
+          >
+            <div class="w-full lg:w-9/12 flex flex-col items-center">
+              <ul
+                class="flex flex-wrap justify-center gap-x-4 gap-y-2 text-sm mb-2"
+              >
+                <li>
+                  <a
+                    href="https://www.sociedademilitar.com.br/sobre"
+                    class="hover:underline"
+                    >Sobre nós</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.sociedademilitar.com.br/contato"
+                    class="hover:underline"
+                    >Contato</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.sociedademilitar.com.br/anuncie"
+                    class="hover:underline"
+                    >Anuncie</a
+                  >
+                </li>
+              </ul>
+
+              <div class="text-sm text-center">
+                <a
+                  href="https://www.sociedademilitar.com.br/privacidade"
+                  class="hover:underline"
+                  >Política de Privacidade e Cookies</a
+                >
+              </div>
+            </div>
+
+          
+            <div
+              class="w-full lg:w-3/12 text-sm leading-relaxed text-center lg:text-end"
+            >
+              <p>
+                - Informações sobre artigos, denúncias, e erros: WhatsApp 21
+                96455 7653 (só WhatsApp / texto)
+              </p>
+              <p>
+                - Contato comercial/publicidade/urgências: 21 98106 2723 e
+                <a
+                  href="/cdn-cgi/l/email-protection"
+                  class="text-blue-400 hover:underline"
+                  >[email&nbsp;protected]</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

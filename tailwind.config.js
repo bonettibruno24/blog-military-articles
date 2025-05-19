@@ -1,9 +1,11 @@
 module.exports = {
-  content: ['./*.html'],
+  content: [
+    './*.html',
+    './src/**/*.{html,js,ts,jsx,tsx}',
+  ],
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Roboto', 'sans-serif'],
         roboto: ['Roboto', 'sans-serif']
       },
       colors: {

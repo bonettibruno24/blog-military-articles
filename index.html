@@ -6,6 +6,8 @@
       content="width=device-width, initial-scale=1.0"
     />
     <title>Projeto com Tailwind</title>
+
+
     <link
       rel="stylesheet"
       href="styles.css"
@@ -18,6 +20,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="bg-white text-center overflow-x-hidden">
+
     <!-- Bloco Header/Logo(img) -->
     <header>
       <div
@@ -30,7 +33,7 @@
               aria-label="Visit Homepage"
             >
               <img
-                class="h-28"
+                class="h-27.5"
                 src="https://www.sociedademilitar.com.br/wp-content/uploads/2025/02/logo-azul-escuro-sociedade-militar.webp"
                 srcset="
                   https://www.sociedademilitar.com.br/wp-content/uploads/2025/02/logo-azul-escuro-sociedade-militar.webp 1x,
@@ -46,11 +49,15 @@
 
     <div class="w-full hi bg-white shadow flex items-center">
       <div
-        class="bg-gray-900 lg:flex w-full text-white lg:justify-center lg:items-center shadow-md p-2"
+        class="bg-gray-900 lg:flex w-full text-white lg:justify-center lg:items-center shadow-md p-3"
       >
         <div
-          class="flex flex-row lg:w-[1150px] md:flex-row items-center py-1 gap-20"
-        >
+          class="flex flex-row lg:w-[1280px] md:flex-row justify-between items-center py-1 gap-20">
+          
+        <button
+        
+        id="hamburger-btn"
+        type="button" class="">
           <div
             class="flex justify font-semibold-center md:justify-start w-full md:w-auto"
           >
@@ -64,18 +71,104 @@
               <span class="block w-6 h-0.5 bg-white"></span>
             </a>
           </div>
+        </button>
+
+        <!-- OverLay -->
+        <div
+        id="overlay"
+        class="fixed inset-0 bg-[#000]/80 backdrop-blur-sm z-40 transition-opacity duration-300 opacity-0 pointer-events-none">
+        <button
+          id="close-btn"
+          class="absolute top-4 right-4 text-white/65 hover:text-gray-300 text-5xl font-extralight"
+        >
+          &times;
+        </button>
+      </div>
+
+        <div
+        id="sidebar"
+        class="fixed top-0 left-0 h-full w-[320px] bg-white shadow-lg transform -translate-x-full transition-transform duration-300 z-50 flex flex-col justify-between">
+        <nav class="px-5 flex items-start text-[#212121] flex-col text-start text-[18px] font-bold py-5">
+          <div class="relative w-full mb-4">
+            <input 
+              type="text" 
+              placeholder="Busca..." 
+              class="w-full h-10 px-3.5 pr-10 border border-gray-300/80 rounded-md font-light text-[14px] focus:outline-none focus:border-gray-300/80 focus:ring-0"
+            />
+            <button type="submit" class="absolute top-1/2 right-3 -translate-y-1/2 text-gray-500">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="5"
+                stroke="currentColor"
+                class="w-4 h-3 "
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z"
+                />
+              </svg>
+            </button>
+          </div>
+          <ul class="space-y-3.5 mt-6">
+            <li><a href="#" class="hover:text-[#0067CC]">Conteúdo Membros</a></li>
+            <li><a href="#" class="hover:text-[#0067CC]">Últimas Notícias</a></li>
+            <li><a href="#" class="hover:text-[#0067CC]">Forças Armadas</a></li>
+            <li><a href="#" class="hover:text-[#0067CC]">Concursos e Cursos</a></li>
+            <li><a href="#" class="hover:text-[#0067CC]">Defesa e Segurança</a></li>
+            <li><a href="#" class="hover:text-[#0067CC]">Setores Estratégicos</a></li>
+            <li><a href="#" class="hover:text-[#0067CC]">Gente e Cultura</a></li>
+            <li><a href="#" class="hover:text-[#0067CC]">Autores</a></li>
+            <li><a href="#" class="hover:text-[#0067CC]">Sobre nós</a></li>
+            <li><a href="#" class="hover:text-[#0067CC]">Anuncie</a></li>
+            <li><a href="#" class="hover:text-[#0067CC]">Contato</a></li>
+            <li><a href="#" class="hover:text-[#0067CC]">Entrar</a></li>
+          </ul>
+        </nav>
+        <div class="px-5 py-4 border-t border-gray-200">       
+          <div class="flex space-x-2 mb-8">
+            <!-- Icon Twitter (X) -->
+            <a href="https://twitter.com/SocMilitar" target="_blank" rel="noopener noreferrer" aria-label="Twitter"
+            class="text-black hover:bg-white/10 rounded transition">
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                class="w-5 h-5 fill-current">
+             <path
+               d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 
+                  26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/>
+           </svg>
+         </a>     
+            <!-- Icon YouTube -->
+            <a href="https://www.youtube.com/c/SociedademilitarBr" target="_blank" rel="noopener noreferrer" aria-label="YouTube"
+              class="text-red-600 hover:bg-white/10 rounded transition">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"
+                  class="w-5 h-5 fill-current">
+                <path
+                  d="M549.7 124.1c-6.3-23.7-24.9-42.3-48.6-48.6C458.5 64 288 64 288 
+                    64S117.5 64 74.9 75.5C51.1 81.8 32.6 100.4 26.3 124.1 16 168 16 
+                    256 16 256s0 88 10.3 131.9c6.3 23.7 24.9 42.3 48.6 48.6C117.5 448 
+                    288 448 288 448s170.5 0 213.1-11.5c23.7-6.3 42.3-24.9 
+                    48.6-48.6 10.3-43.9 10.3-131.9 
+                    10.3-131.9s0-88-10.3-131.9zM232 334V178l142 78-142 78z"/>
+              </svg>
+            </a>
+          </div>
+          <p class="text-[12px] font-semibold text-start text-[#0A0909]/35 mb-2 ">Revista Sociedade Militar, todos os direitos reservados.</p>
+        </div>
+      </div>
 
           <!-- Logo Mobile -->
-          <div class="flex justify-center w-full lg:w-auto lg:hidden">
+          <div class="lg:hidden absolute left-1/2 transform -translate-x-1/2">
             <img
-              class="max-w-[100px] h-auto"
               src="https://www.sociedademilitar.com.br/wp-content/uploads/2025/02/logo-branco-fundo-azul-sociedade-militar-25.png"
               alt="Logo Sociedade Militar"
+              class="max-w-[100px] h-auto"
             />
           </div>
 
           <!-- Ícone de busca -->
-          <div class="flex lg:justify-end w-full md:w-auto lg:hidden">
+          <div class="flex justify-end items-end w-full md:w-auto lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -91,64 +184,65 @@
               />
             </svg>
           </div>
-          <div class="hidden lg:flex p-2 font-roboto font-extrabold">
+          <div class="hidden justify-end items-end lg:flex p-2 font-roboto font-semibold">
             <ul
-              class="lg:justify-center text-sm space-x-4 tracking-tighter hidden md:flex"
+              class="lg:justify-end items-end text-sm space-x-4 hidden md:flex"
             >
-              <li>
+            <!-- Botão Para Live de Eventos(AO VIVO) -->
+              <!-- <li>
                 <a
                   href="https://www.sociedademilitar.com.br/aovivo"
                   class="px-2 py-1 bg-red-600 text-white rounded"
                 >
                   AO VIVO
                 </a>
-              </li>
+              </li> -->
               <li>
                 <a
                   href="https://www.sociedademilitar.com.br/militares-forcas-armadas-seguranca-publica-defesa-e-geopolitica"
-                  class="hover:text-gray-300"
+                  class="hover:text-[#0067cc]"
                   >Página Inicial</a
                 >
               </li>
               <li>
                 <a
                   href="https://www.sociedademilitar.com.br/ultimas-noticias"
-                  class="hover:text-gray-300"
+                  class="hover:text-[#0067cc]"
                   >Últimas Notícias</a
                 >
               </li>
               <li>
                 <a
                   href="https://www.sociedademilitar.com.br/category/forcas-armadas-policia"
-                  class="hover:text-gray-300"
+                  class="hover:text-[#0067cc]"
                   >Forças Armadas</a
                 >
               </li>
               <li>
                 <a
                   href="https://www.sociedademilitar.com.br/category/c34-geopolitica-internacional-defesa-etc"
-                  class="hover:text-gray-300"
+                  class="hover:text-[#0067cc]"
                   >Defesa e Segurança</a
                 >
               </li>
               <li>
                 <a
                   href="https://www.sociedademilitar.com.br/category/setores-estrategicos"
-                  class="hover:text-gray-300"
+                   class="hover:text-[#0067cc]"
                   >Setores Estratégicos</a
                 >
               </li>
               <li>
                 <a
                   href="https://www.sociedademilitar.com.br/category/concursos"
-                  class="hover:text-gray-300"
+                   class="hover:text-[#0067cc]"
                   >Concursos e Cursos</a
                 >
               </li>
               <li>
                 <a
                   href="https://www.sociedademilitar.com.br/category/gente-militar-familia"
-                  class="hover:text-gray-300"
+                   class="hover:text-[#0067cc]"
                   >Gente e Cultura</a
                 >
               </li>
@@ -157,12 +251,12 @@
         </div>
       </div>
     </div>
-    <!-- Fim do Bloco Header/Logo(img) -->
+      <!-- Fim do Header -->
 
-    <section class="p-2">
+    <section class="p-3 xl:p-0">
       <div class="flex space-y-8 md:justify-center md:items-center mx-auto">
         <div
-          class="flex justify-center lg:w-[1150px] flex-col lg:flex-row lg:pt-52 bg-white"
+          class="flex justify-center lg:w-[1280px] flex-col lg:flex-row lg:pt-52 bg-white lg:space-x-4"
         >
           <article class="flex flex-col">
             <div class="w-full relative ">
@@ -171,20 +265,18 @@
                 aria-label="Read article"
               >
                 <img
-                  src="https://www.sociedademilitar.com.br/wp-content/uploads/2025/05/Debandada-de-pilotos-na-FAB-inclui-ate-oficiais-superiores-e-capitaes-1140x570.jpg"
+                src="https://www.sociedademilitar.com.br/wp-content/uploads/2025/05/Ministerio-da-defesa-luta-contra-sindicato-militar-na-justica-federal.jpg"
                   alt="Mais pilotos pedem demissão em busca de melhores salários e condições de vida"
-                  class="w-full h-full object-cover"
+                  class="w-[1800px]  h-full object-cover"
                   loading="lazy"
                 />
               </a>
 
               <!-- Categoria -->
-              <div
-                class="absolute bottom-0 left-2 uppercase bg-blue-400 text-white text-xs px-2 py-1 rounded"
-              >
-                <a href="https://www.sociedademilitar.com.br/category/destaque"
-                  >Destaque</a
-                >
+              <div class="bg-[#2563eb] absolute bottom-2 left-2 px-2 uppercase font-normal tracking-widest text-[11px]" style=" color: white;">
+                <a href="https://www.sociedademilitar.com.br/category/setores-estrategicos/automotivo" style="text-decoration: none; color: white;">
+                  Aviação Militar
+                </a>
               </div>
             </div>
 
@@ -194,7 +286,7 @@
             >
               <div class="text-start">
                 <h3
-                  class="py-3 lg:text-3xl text-xl font-bold font-roboto text-slate-950 lg:leading-normal leading-tight lg:tracking-wide trackin"
+                  class="py-3 lg:text-3xl text-xl font-bold font-roboto text-slate-950 hover:text-[#0067cc] lg:leading-normal leading-tight lg:tracking-wide"
                 >
                   <a
                     href="https://www.sociedademilitar.com.br/2025/05/nova-debandada-de-pilotos-da-fab-lista-inclui-oficial-pioneira-piloto-do-helicoptero-caracal-que-atuou-em-brumadinho.html"
@@ -207,18 +299,18 @@
 
                 <!-- Metadados -->
                 <div
-                  class="flex flex-row justify-start items-center lg:text-sm text-xs text-gray-500 space-x-7"
+                  class="flex flex-row justify-start md:tracking-wider items-center lg:text-[10px] font-extrabold text-[11px] lg:font- text-gray-500 space-x-5"
                 >
-                  <span>
+                  <span class="uppercase opacity-75">
                     por
                     <a
                       href="https://www.sociedademilitar.com.br/author/smbr"
-                      class="text-blue-600 font-semibold uppercase hover:underline"
+                      class="text-[#0067cc]  opacity-100"
                       >Sociedade Militar</a
                     >
                   </span>
                   <span>
-                    <a
+                    <a class="font-normal opacity-75"
                       href="https://www.sociedademilitar.com.br/2025/05/nova-debandada-de-pilotos-da-fab-lista-inclui-oficial-pioneira-piloto-do-helicoptero-caracal-que-atuou-em-brumadinho.html"
                     >
                       07/05/2025
@@ -228,129 +320,231 @@
               </div>
 
               <div
-                class="flex w-24 h-7 rounded-sm border border-gray-300 justify-center text-center items-center"
-              >
+                class="flex w-24 h-7 rounded-sm border border-gray-300 justify-center text-center items-center hover:bg-[#0067cc] hover:text-white text-black font-semibold uppercase text-[11px] tracking-wider  transition duration-200 ease-in-out">
+              
                 <a
                   href="https://www.sociedademilitar.com.br/2025/05/nova-debandada-de-pilotos-da-fab-lista-inclui-oficial-pioneira-piloto-do-helicoptero-caracal-que-atuou-em-brumadinho.html"
-                  class="text-gray-500 uppercase hover:underline text-sm font-bold"
+                  
                 >
                   Ler mais<span class="sr-only"> detalhes</span>
                 </a>
               </div>
-              <div class="hidden sm:grid sm:grid-cols-2 ">
-                <article style="background-color: white; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06); padding: 1rem; text-align: start;">
-                  <h3 style="font-size: 0.875rem; font-weight: bold; color: #1F2937; letter-spacing: 0.05em;">
-                    <a href="https://www.sociedademilitar.com.br/2025/05/exercito-reformula-doutrina-dos-kids-pretos-integracao-com-etica-operacoes-psicologicas-e-aquisicao-de-blindados-urbanos.html" style="display: flex; align-items: flex-start; gap: 0.5rem; text-decoration: none;">
-                      <span style="font-size: 10px; color: #2563EB;">▶</span>
-                      Exército reformula doutrina dos Kids Pretos: aulas de ética, noções de operações psicológicas e aquisição de "blindados urbanos"
+              <!-- Mobile -->
+              <div class=" p-2 space-y-2 sm:grid sm:grid-cols-2 lg:grid-cols-1 lg:gap-y-[-2px] sm:gap-x-5 xl:grid-cols-2 xl:gap-x-12  ">
+                <article class="" style=" text-align: start;">
+                  <h3 class="tracking-[0.015em] font-bold lg:text-[16px] text-[15px] leading-5 "  style=" color: #1F2937;">
+                    <a href="https://www.sociedademilitar.com.br/2025/05/exercito-reformula-doutrina-dos-kids-pretos-integracao-com-etica-operacoes-psicologicas-e-aquisicao-de-blindados-urbanos.html" style="display: flex; align-items: flex-start">
+                      <span style="
+                          display: inline-block;
+                          width: 0;
+                          height: 0;
+                          border-left: 4px solid transparent;
+                          border-right: 4px solid transparent;
+                          border-bottom: 6.9px solid #2563EB;
+                          transform: rotate(90deg);
+                      " class="pt-3"></span>
+                      A afirmação do Ministério da Defesa às pensionistas de militares: “não há direito adquirido à assistência médico-hospitalar” nas Forças Armadas
                     </a>
                   </h3>
                 </article>
-                <article style="background-color: white; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06); padding: 1rem; text-align: start;">
-                  <h3 style="font-size: 0.875rem; font-weight: bold; color: #1F2937; letter-spacing: 0.05em;">
-                    <a href="https://www.sociedademilitar.com.br/2025/05/exercito-reformula-doutrina-dos-kids-pretos-integracao-com-etica-operacoes-psicologicas-e-aquisicao-de-blindados-urbanos.html" style="display: flex; align-items: flex-start; gap: 0.5rem; text-decoration: none;">
-                      <span style="font-size: 10px; color: #2563EB;">▶</span>
-                      Exército reformula doutrina dos Kids Pretos: aulas de ética, noções de operações psicológicas e aquisição de "blindados urbanos"
+                <article class="" style=" text-align: start;">
+                  <h3 class="tracking-[0.015em] font-bold lg:text-[16px] text-[15px] leading-5 "  style=" color: #1F2937;">
+                    <a href="https://www.sociedademilitar.com.br/2025/05/exercito-reformula-doutrina-dos-kids-pretos-integracao-com-etica-operacoes-psicologicas-e-aquisicao-de-blindados-urbanos.html" style="display: flex; align-items: flex-start">
+                      <span style="
+                          display: inline-block;
+                          width: 0;
+                          height: 0;
+                          border-left: 4px solid transparent;
+                          border-right: 4px solid transparent;
+                          border-bottom: 6.9px solid #2563EB;
+                          transform: rotate(90deg);
+                      " class="pt-3"></span>
+                      A afirmação do Ministério da Defesa às pensionistas de militares: “não há direito adquirido à assistência médico-hospitalar” nas Forças Armadas
                     </a>
                   </h3>
                 </article>
-                <article style="background-color: white; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06); padding: 1rem; text-align: start;">
-                  <h3 style="font-size: 0.875rem; font-weight: bold; color: #1F2937; letter-spacing: 0.05em;">
-                    <a href="https://www.sociedademilitar.com.br/2025/05/exercito-reformula-doutrina-dos-kids-pretos-integracao-com-etica-operacoes-psicologicas-e-aquisicao-de-blindados-urbanos.html" style="display: flex; align-items: flex-start; gap: 0.5rem; text-decoration: none;">
-                      <span style="font-size: 10px; color: #2563EB;">▶</span>
-                      Exército reformula doutrina dos Kids Pretos: aulas de ética, noções de operações psicológicas e aquisição de "blindados urbanos"
+                <article class="" style=" text-align: start;">
+                  <h3 class="tracking-[0.015em] font-bold lg:text-[16px] text-[15px] md:leading-5 "  style=" color: #1F2937;">
+                    <a href="https://www.sociedademilitar.com.br/2025/05/exercito-reformula-doutrina-dos-kids-pretos-integracao-com-etica-operacoes-psicologicas-e-aquisicao-de-blindados-urbanos.html" style="display: flex; align-items: flex-start">
+                      <span style="
+                          display: inline-block;
+                          width: 0;
+                          height: 0;
+                          border-left: 4px solid transparent;
+                          border-right: 4px solid transparent;
+                          border-bottom: 6.9px solid #2563EB;
+                          transform: rotate(90deg);
+                      " class="pt-3"></span>
+                      A afirmação do Ministério da Defesa às pensionistas de militares: “não há direito adquirido à assistência médico-hospitalar” nas Forças Armadas
                     </a>
                   </h3>
                 </article>
-                <article style="background-color: white; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06); padding: 1rem; text-align: start;">
-                  <h3 style="font-size: 0.875rem; font-weight: bold; color: #1F2937; letter-spacing: 0.05em;">
-                    <a href="https://www.sociedademilitar.com.br/2025/05/exercito-reformula-doutrina-dos-kids-pretos-integracao-com-etica-operacoes-psicologicas-e-aquisicao-de-blindados-urbanos.html" style="display: flex; align-items: flex-start; gap: 0.5rem; text-decoration: none;">
-                      <span style="font-size: 10px; color: #2563EB;">▶</span>
-                      Exército reformula doutrina dos Kids Pretos: aulas de ética, noções de operações psicológicas e aquisição de "blindados urbanos"
+                <article class="" style=" text-align: start;">
+                  <h3 class="tracking-[0.015em] font-bold lg:text-[16px] text-[15px] md:leading-5 "  style=" color: #1F2937;">
+                    <a href="https://www.sociedademilitar.com.br/2025/05/exercito-reformula-doutrina-dos-kids-pretos-integracao-com-etica-operacoes-psicologicas-e-aquisicao-de-blindados-urbanos.html" style="display: flex; align-items: flex-start">
+                      <span style="
+                          display: inline-block;
+                          width: 0;
+                          height: 0;
+                          border-left: 4px solid transparent;
+                          border-right: 4px solid transparent;
+                          border-bottom: 6.9px solid #2563EB;
+                          transform: rotate(90deg);
+                      " class="pt-3"></span>
+                      A afirmação do Ministério da Defesa às pensionistas de militares: “não há direito adquirido à assistência médico-hospitalar” nas Forças Armadas
                     </a>
                   </h3>
                 </article>
-               
               </div>
             </div>
-            
           </article>
+
           <!-- Conteudo lateral direito  -->
-          <div class="hidden lg:flex lg:w-full lg:flex-col rounded-sm text-center lg:pt-5 lg:pt-0">
-            <article style="background-color: white; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06); padding: 1rem; text-align: start;">
-              <h3 style="font-size: 0.875rem; font-weight: bold; color: #1F2937; letter-spacing: 0.05em;">
-                <a href="https://www.sociedademilitar.com.br/2025/05/exercito-reformula-doutrina-dos-kids-pretos-integracao-com-etica-operacoes-psicologicas-e-aquisicao-de-blindados-urbanos.html" style="display: flex; align-items: flex-start; gap: 0.5rem; text-decoration: none;">
-                  <span style="font-size: 10px; color: #2563EB;">▶</span>
-                  Exército reformula doutrina dos Kids Pretos: aulas de ética, noções de operações psicológicas e aquisição de "blindados urbanos"
-                </a>
-              </h3>
-            </article>
-            <article style="background-color: white; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06); padding: 1rem; text-align: start;">
-              <h3 style="font-size: 0.875rem; font-weight: bold; color: #1F2937; letter-spacing: 0.05em;">
-                <a href="https://www.sociedademilitar.com.br/2025/05/exercito-reformula-doutrina-dos-kids-pretos-integracao-com-etica-operacoes-psicologicas-e-aquisicao-de-blindados-urbanos.html" style="display: flex; align-items: flex-start; gap: 0.5rem; text-decoration: none;">
-                  <span style="font-size: 10px; color: #2563EB;">▶</span>
-                  Exército reformula doutrina dos Kids Pretos: aulas de ética, noções de operações psicológicas e aquisição de "blindados urbanos"
-                </a>
-              </h3>
-            </article>
-            <article style="background-color: white; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06); padding: 1rem; text-align: start;">
-              <h3 style="font-size: 0.875rem; font-weight: bold; color: #1F2937; letter-spacing: 0.05em;">
-                <a href="https://www.sociedademilitar.com.br/2025/05/exercito-reformula-doutrina-dos-kids-pretos-integracao-com-etica-operacoes-psicologicas-e-aquisicao-de-blindados-urbanos.html" style="display: flex; align-items: flex-start; gap: 0.5rem; text-decoration: none;">
-                  <span style="font-size: 10px; color: #2563EB;">▶</span>
-                  Exército reformula doutrina dos Kids Pretos: aulas de ética, noções de operações psicológicas e aquisição de "blindados urbanos"
-                </a>
-              </h3>
-            </article>
-            <article style="background-color: white; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06); padding: 1rem; text-align: start;">
-              <h3 style="font-size: 0.875rem; font-weight: bold; color: #1F2937; letter-spacing: 0.05em;">
-                <a href="https://www.sociedademilitar.com.br/2025/05/exercito-reformula-doutrina-dos-kids-pretos-integracao-com-etica-operacoes-psicologicas-e-aquisicao-de-blindados-urbanos.html" style="display: flex; align-items: flex-start; gap: 0.5rem; text-decoration: none;">
-                  <span style="font-size: 10px; color: #2563EB;">▶</span>
-                  Exército reformula doutrina dos Kids Pretos: aulas de ética, noções de operações psicológicas e aquisição de "blindados urbanos"
-                </a>
-              </h3>
-            </article>
-            <article style="background-color: white; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06); padding: 1rem; text-align: start;">
-              <h3 style="font-size: 0.875rem; font-weight: bold; color: #1F2937; letter-spacing: 0.05em;">
-                <a href="https://www.sociedademilitar.com.br/2025/05/exercito-reformula-doutrina-dos-kids-pretos-integracao-com-etica-operacoes-psicologicas-e-aquisicao-de-blindados-urbanos.html" style="display: flex; align-items: flex-start; gap: 0.5rem; text-decoration: none;">
-                  <span style="font-size: 10px; color: #2563EB;">▶</span>
-                  Exército reformula doutrina dos Kids Pretos: aulas de ética, noções de operações psicológicas e aquisição de "blindados urbanos"
-                </a>
-              </h3>
-            </article>
-            <article style="background-color: white; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06); padding: 1rem; text-align: start;">
-              <h3 style="font-size: 0.875rem; font-weight: bold; color: #1F2937; letter-spacing: 0.05em;">
-                <a href="https://www.sociedademilitar.com.br/2025/05/exercito-reformula-doutrina-dos-kids-pretos-integracao-com-etica-operacoes-psicologicas-e-aquisicao-de-blindados-urbanos.html" style="display: flex; align-items: flex-start; gap: 0.5rem; text-decoration: none;">
-                  <span style="font-size: 10px; color: #2563EB;">▶</span>
-                  Exército reformula doutrina dos Kids Pretos: aulas de ética, noções de operações psicológicas e aquisição de "blindados urbanos"
-                </a>
-              </h3>
-            </article>
-            <article style="background-color: white; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06); padding: 1rem; text-align: start;">
-              <h3 style="font-size: 0.875rem; font-weight: bold; color: #1F2937; letter-spacing: 0.05em;">
-                <a href="https://www.sociedademilitar.com.br/2025/05/exercito-reformula-doutrina-dos-kids-pretos-integracao-com-etica-operacoes-psicologicas-e-aquisicao-de-blindados-urbanos.html" style="display: flex; align-items: flex-start; gap: 0.5rem; text-decoration: none;">
-                  <span style="font-size: 10px; color: #2563EB;">▶</span>
-                  Exército reformula doutrina dos Kids Pretos: aulas de ética, noções de operações psicológicas e aquisição de "blindados urbanos"
-                </a>
-              </h3>
-            </article>
-            <article style="background-color: white; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06); padding: 1rem; text-align: start;">
-              <h3 style="font-size: 0.875rem; font-weight: bold; color: #1F2937; letter-spacing: 0.05em;">
-                <a href="https://www.sociedademilitar.com.br/2025/05/exercito-reformula-doutrina-dos-kids-pretos-integracao-com-etica-operacoes-psicologicas-e-aquisicao-de-blindados-urbanos.html" style="display: flex; align-items: flex-start; gap: 0.5rem; text-decoration: none;">
-                  <span style="font-size: 10px; color: #2563EB;">▶</span>
-                  Exército reformula doutrina dos Kids Pretos: aulas de ética, noções de operações psicológicas e aquisição de "blindados urbanos"
+          <div class="hidden lg:flex lg:flex-col rounded-sm text-center border h-fit border-[#e0e0e0] p-7 space-y-3">
+            <article class="" style=" text-align: start;">
+              <h3 class="tracking-[0.015em] font-bold text-[16px] leading-5 "  style=" color: #1F2937;">
+                <a href="https://www.sociedademilitar.com.br/2025/05/exercito-reformula-doutrina-dos-kids-pretos-integracao-com-etica-operacoes-psicologicas-e-aquisicao-de-blindados-urbanos.html" style="display: flex; align-items: flex-start">
+                  <span style="
+                      display: inline-block;
+                      width: 0;
+                      height: 0;
+                      border-left: 4px solid transparent;
+                      border-right: 4px solid transparent;
+                      border-bottom: 6.9px solid #2563EB;
+                      transform: rotate(90deg);
+                  " class="pt-3"></span>
+                  A afirmação do Ministério da Defesa às pensionistas de militares: “não há direito adquirido à assistência médico-hospitalar” nas Forças Armadas
                 </a>
               </h3>
             </article>
             
+            <article class="" style=" text-align: start;">
+              <h3 class="tracking-[0.015em] font-bold text-[16px] leading-5 "  style=" color: #1F2937;">
+                <a href="https://www.sociedademilitar.com.br/2025/05/exercito-reformula-doutrina-dos-kids-pretos-integracao-com-etica-operacoes-psicologicas-e-aquisicao-de-blindados-urbanos.html" style="display: flex; align-items: flex-start">
+                  <span style="
+                      display: inline-block;
+                      width: 0;
+                      height: 0;
+                      border-left: 4px solid transparent;
+                      border-right: 4px solid transparent;
+                      border-bottom: 6.9px solid #2563EB;
+                      transform: rotate(90deg);
+                  " class="pt-3"></span>
+                  A afirmação do Ministério da Defesa às pensionistas de militares: “não há direito adquirido à assistência médico-hospitalar” nas Forças Armadas
+                </a>
+              </h3>
+            </article>
+            
+            <article class="" style=" text-align: start;">
+              <h3 class="tracking-[0.015em] font-bold text-[16px] leading-5 "  style=" color: #1F2937;">
+                <a href="https://www.sociedademilitar.com.br/2025/05/exercito-reformula-doutrina-dos-kids-pretos-integracao-com-etica-operacoes-psicologicas-e-aquisicao-de-blindados-urbanos.html" style="display: flex; align-items: flex-start">
+                  <span style="
+                      display: inline-block;
+                      width: 0;
+                      height: 0;
+                      border-left: 4px solid transparent;
+                      border-right: 4px solid transparent;
+                      border-bottom: 6.9px solid #2563EB;
+                      transform: rotate(90deg);
+                  " class="pt-3"></span>
+                  A afirmação do Ministério da Defesa às pensionistas de militares: “não há direito adquirido à assistência médico-hospitalar” nas Forças Armadas
+                </a>
+              </h3>
+            </article>
+            
+            <article class="" style=" text-align: start;">
+              <h3 class="tracking-[0.015em] font-bold text-[16px] leading-5 "  style=" color: #1F2937;">
+                <a href="https://www.sociedademilitar.com.br/2025/05/exercito-reformula-doutrina-dos-kids-pretos-integracao-com-etica-operacoes-psicologicas-e-aquisicao-de-blindados-urbanos.html" style="display: flex; align-items: flex-start">
+                  <span style="
+                      display: inline-block;
+                      width: 0;
+                      height: 0;
+                      border-left: 4px solid transparent;
+                      border-right: 4px solid transparent;
+                      border-bottom: 6.9px solid #2563EB;
+                      transform: rotate(90deg);
+                  " class="pt-3"></span>
+                  A afirmação do Ministério da Defesa às pensionistas de militares: “não há direito adquirido à assistência médico-hospitalar” nas Forças Armadas
+                </a>
+              </h3>
+            </article>
+            
+            <article class="" style=" text-align: start;">
+              <h3 class="tracking-[0.015em] font-bold text-[16px] leading-5 "  style=" color: #1F2937;">
+                <a href="https://www.sociedademilitar.com.br/2025/05/exercito-reformula-doutrina-dos-kids-pretos-integracao-com-etica-operacoes-psicologicas-e-aquisicao-de-blindados-urbanos.html" style="display: flex; align-items: flex-start">
+                  <span style="
+                      display: inline-block;
+                      width: 0;
+                      height: 0;
+                      border-left: 4px solid transparent;
+                      border-right: 4px solid transparent;
+                      border-bottom: 6.9px solid #2563EB;
+                      transform: rotate(90deg);
+                  " class="pt-3"></span>
+                  A afirmação do Ministério da Defesa às pensionistas de militares: “não há direito adquirido à assistência médico-hospitalar” nas Forças Armadas
+                </a>
+              </h3>
+            </article>
+            
+            <article class="" style=" text-align: start;">
+              <h3 class="tracking-[0.015em] font-bold text-[16px] leading-5 "  style=" color: #1F2937;">
+                <a href="https://www.sociedademilitar.com.br/2025/05/exercito-reformula-doutrina-dos-kids-pretos-integracao-com-etica-operacoes-psicologicas-e-aquisicao-de-blindados-urbanos.html" style="display: flex; align-items: flex-start">
+                  <span style="
+                      display: inline-block;
+                      width: 0;
+                      height: 0;
+                      border-left: 4px solid transparent;
+                      border-right: 4px solid transparent;
+                      border-bottom: 6.9px solid #2563EB;
+                      transform: rotate(90deg);
+                  " class="pt-3"></span>
+                  A afirmação do Ministério da Defesa às pensionistas de militares: “não há direito adquirido à assistência médico-hospitalar” nas Forças Armadas
+                </a>
+              </h3>
+            </article>
+            
+            <article class="" style=" text-align: start;">
+              <h3 class="tracking-[0.015em] font-bold text-[16px] leading-5 "  style=" color: #1F2937;">
+                <a href="https://www.sociedademilitar.com.br/2025/05/exercito-reformula-doutrina-dos-kids-pretos-integracao-com-etica-operacoes-psicologicas-e-aquisicao-de-blindados-urbanos.html" style="display: flex; align-items: flex-start">
+                  <span style="
+                      display: inline-block;
+                      width: 0;
+                      height: 0;
+                      border-left: 4px solid transparent;
+                      border-right: 4px solid transparent;
+                      border-bottom: 6.9px solid #2563EB;
+                      transform: rotate(90deg);
+                  " class="pt-3"></span>
+                  A afirmação do Ministério da Defesa às pensionistas de militares: “não há direito adquirido à assistência médico-hospitalar” nas Forças Armadas
+                </a>
+              </h3>
+            </article>
+            
+            <article class="" style=" text-align: start;">
+              <h3 class="tracking-[0.015em] font-bold text-[16px] leading-5 "  style=" color: #1F2937;">
+                <a href="https://www.sociedademilitar.com.br/2025/05/exercito-reformula-doutrina-dos-kids-pretos-integracao-com-etica-operacoes-psicologicas-e-aquisicao-de-blindados-urbanos.html" style="display: flex; align-items: flex-start">
+                  <span style="
+                      display: inline-block;
+                      width: 0;
+                      height: 0;
+                      border-left: 4px solid transparent;
+                      border-right: 4px solid transparent;
+                      border-bottom: 6.9px solid #2563EB;
+                      transform: rotate(90deg);
+                  " class="pt-3"></span>
+                  A afirmação do Ministério da Defesa às pensionistas de militares: “não há direito adquirido à assistência médico-hospitalar” nas Forças Armadas
+                </a>
+              </h3>
+            </article>
             
           </div>
         </div>
       </div>
       <!-- Artigos/Categoria  -->
       <section
-        class="flex xl:w-[1150px] justify-center mx-auto items-center pt-14">
-        <div class="lg:grid sm:grid-col-2 sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          <article style="background-color: white; border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); overflow: hidden; width: 100%; position: relative;">
+        class="flex xl:w-[1280px] justify-center mx-auto items-center flex-col pt-14">
+        <div class="lg:grid sm:grid-col-2 sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 gap-y-5 grid ">
+          <article style="background-color: white; overflow: hidden; width: 100%; position: relative;">
             <div style="position: relative; width: 100%;">
               <a href="https://www.sociedademilitar.com.br/2025/05/honda-off-road-e-guerra-motos-que-enfrentam-florestas-desertos-e-ate-missoes-militares-mostram-como-a-marca-japonesa-virou-simbolo-global-de-robustez-e-mobilidade-extrema-fplv.html">
                 <img
@@ -359,25 +553,30 @@
                   style="width: 100%; height: auto; object-fit: cover;"
                 />
               </a>
-              <div style="position: absolute; bottom: 0.5rem; left: 0.5rem; background-color: #2563eb; color: white; font-size: 0.75rem; padding: 0.25rem 0.5rem; border-radius: 0.25rem; text-transform: uppercase; z-index: 10;">
+              <div class="bg-[#2563eb] absolute bottom-2 left-2 px-2 uppercase font-normal tracking-widest text-[11px]" style=" color: white;">
                 <a href="https://www.sociedademilitar.com.br/category/setores-estrategicos/automotivo" style="text-decoration: none; color: white;">
-                  Automotivo
+                  Aviação Militar
                 </a>
               </div>
             </div>
           
-            <div style="padding: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
-              <h3 style="font-size: 1rem; font-weight: 600; text-align: start; color: #1f2937; line-height: 1.375;">
-                <a href="https://www.sociedademilitar.com.br/2025/05/honda-off-road-e-guerra-motos-que-enfrentam-florestas-desertos-e-ate-missoes-militares-mostram-como-a-marca-japonesa-virou-simbolo-global-de-robustez-e-mobilidade-extrema-fplv.html" style="color: #1f2937; text-decoration: none;">
-                  Honda, Off-Road e Guerra: motos que enfrentam florestas, desertos e até missões militares...
+            <div class="flex flex-col items-start text-start gap-2">
+              <h3 class="mt-4 hover:text-[#0067cc] tracking-tighter font-bold transition duration-300 ease-in-out text-[#212121] text-[16px]" >
+                <a
+                class=""
+                href="https://www.sociedademilitar.com.br/2025/05/honda-off-road-e-guerra-motos-que-enfrentam-florestas-desertos-e-ate-missoes-militares-mostram-como-a-marca-japonesa-virou-simbolo-global-de-robustez-e-mobilidade-extrema-fplv.html">
+                 Nova debandada de pilotos da FAB: lista inclui oficial pioneira, piloto do Helicóptero Caracal que atuou em Brumadinho
                 </a>
               </h3>
-              <p style="font-size: 0.75rem; color: #6b7280; margin: 0;">
-                <i style="margin-right: 0.25rem;" class="fa fa-clock-o"></i> 07/05/2025
+              <p class="flex flex-row gap-0.5 items-center justify-center opacity-75 text-[10px] md:text-xs" style="color: #6b7280; margin: 0;">
+                <svg xmlns="http://www.w3.org/2000/svg" style="width: 14px; height: 14px; color: #2e9fff;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6l4 2m6-2a10 10 0 1 1-20 0 10 10 0 0 1 20 0z" />
+                </svg>
+                 07/05/2025
               </p>
             </div>
           </article>
-          <article style="background-color: white; border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); overflow: hidden; width: 100%; position: relative;">
+          <article style="background-color: white; overflow: hidden; width: 100%; position: relative;">
             <div style="position: relative; width: 100%;">
               <a href="https://www.sociedademilitar.com.br/2025/05/honda-off-road-e-guerra-motos-que-enfrentam-florestas-desertos-e-ate-missoes-militares-mostram-como-a-marca-japonesa-virou-simbolo-global-de-robustez-e-mobilidade-extrema-fplv.html">
                 <img
@@ -386,25 +585,30 @@
                   style="width: 100%; height: auto; object-fit: cover;"
                 />
               </a>
-              <div style="position: absolute; bottom: 0.5rem; left: 0.5rem; background-color: #2563eb; color: white; font-size: 0.75rem; padding: 0.25rem 0.5rem; border-radius: 0.25rem; text-transform: uppercase; z-index: 10;">
+              <div class="bg-[#2563eb] absolute bottom-2 left-2 px-2 uppercase font-normal tracking-widest text-[11px]" style=" color: white;">
                 <a href="https://www.sociedademilitar.com.br/category/setores-estrategicos/automotivo" style="text-decoration: none; color: white;">
-                  Automotivo
+                  Aviação Militar
                 </a>
               </div>
             </div>
           
-            <div style="padding: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
-              <h3 style="font-size: 1rem; font-weight: 600; text-align: start; color: #1f2937; line-height: 1.375;">
-                <a href="https://www.sociedademilitar.com.br/2025/05/honda-off-road-e-guerra-motos-que-enfrentam-florestas-desertos-e-ate-missoes-militares-mostram-como-a-marca-japonesa-virou-simbolo-global-de-robustez-e-mobilidade-extrema-fplv.html" style="color: #1f2937; text-decoration: none;">
-                  Honda, Off-Road e Guerra: motos que enfrentam florestas, desertos e até missões militares...
+            <div class="flex flex-col items-start text-start gap-2">
+              <h3 class="mt-4 hover:text-[#0067cc] tracking-tighter font-bold transition duration-300 ease-in-out text-[#212121] text-[16px]" >
+                <a
+                class=""
+                href="https://www.sociedademilitar.com.br/2025/05/honda-off-road-e-guerra-motos-que-enfrentam-florestas-desertos-e-ate-missoes-militares-mostram-como-a-marca-japonesa-virou-simbolo-global-de-robustez-e-mobilidade-extrema-fplv.html">
+                 Nova debandada de pilotos da FAB: lista inclui oficial pioneira, piloto do Helicóptero Caracal que atuou em Brumadinho
                 </a>
               </h3>
-              <p style="font-size: 0.75rem; color: #6b7280; margin: 0;">
-                <i style="margin-right: 0.25rem;" class="fa fa-clock-o"></i> 07/05/2025
+              <p class="flex flex-row gap-0.5 items-center justify-center opacity-75 text-[10px] md:text-xs" style="color: #6b7280; margin: 0;">
+                <svg xmlns="http://www.w3.org/2000/svg" style="width: 14px; height: 14px; color: #2e9fff;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6l4 2m6-2a10 10 0 1 1-20 0 10 10 0 0 1 20 0z" />
+                </svg>
+                 07/05/2025
               </p>
             </div>
           </article>
-          <article style="background-color: white; border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); overflow: hidden; width: 100%; position: relative;">
+          <article style="background-color: white; overflow: hidden; width: 100%; position: relative;">
             <div style="position: relative; width: 100%;">
               <a href="https://www.sociedademilitar.com.br/2025/05/honda-off-road-e-guerra-motos-que-enfrentam-florestas-desertos-e-ate-missoes-militares-mostram-como-a-marca-japonesa-virou-simbolo-global-de-robustez-e-mobilidade-extrema-fplv.html">
                 <img
@@ -413,25 +617,30 @@
                   style="width: 100%; height: auto; object-fit: cover;"
                 />
               </a>
-              <div style="position: absolute; bottom: 0.5rem; left: 0.5rem; background-color: #2563eb; color: white; font-size: 0.75rem; padding: 0.25rem 0.5rem; border-radius: 0.25rem; text-transform: uppercase; z-index: 10;">
+              <div class="bg-[#2563eb] absolute bottom-2 left-2 px-2 uppercase font-normal tracking-widest text-[11px]" style=" color: white;">
                 <a href="https://www.sociedademilitar.com.br/category/setores-estrategicos/automotivo" style="text-decoration: none; color: white;">
-                  Automotivo
+                  Aviação Militar
                 </a>
               </div>
             </div>
           
-            <div style="padding: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
-              <h3 style="font-size: 1rem; font-weight: 600; text-align: start; color: #1f2937; line-height: 1.375;">
-                <a href="https://www.sociedademilitar.com.br/2025/05/honda-off-road-e-guerra-motos-que-enfrentam-florestas-desertos-e-ate-missoes-militares-mostram-como-a-marca-japonesa-virou-simbolo-global-de-robustez-e-mobilidade-extrema-fplv.html" style="color: #1f2937; text-decoration: none;">
-                  Honda, Off-Road e Guerra: motos que enfrentam florestas, desertos e até missões militares...
+            <div class="flex flex-col items-start text-start gap-2">
+              <h3 class="mt-4 hover:text-[#0067cc] tracking-tighter font-bold transition duration-300 ease-in-out text-[#212121] text-[16px]" >
+                <a
+                class=""
+                href="https://www.sociedademilitar.com.br/2025/05/honda-off-road-e-guerra-motos-que-enfrentam-florestas-desertos-e-ate-missoes-militares-mostram-como-a-marca-japonesa-virou-simbolo-global-de-robustez-e-mobilidade-extrema-fplv.html">
+                 Nova debandada de pilotos da FAB: lista inclui oficial pioneira, piloto do Helicóptero Caracal que atuou em Brumadinho
                 </a>
               </h3>
-              <p style="font-size: 0.75rem; color: #6b7280; margin: 0;">
-                <i style="margin-right: 0.25rem;" class="fa fa-clock-o"></i> 07/05/2025
+              <p class="flex flex-row gap-0.5 items-center justify-center opacity-75 text-[10px] md:text-xs" style="color: #6b7280; margin: 0;">
+                <svg xmlns="http://www.w3.org/2000/svg" style="width: 14px; height: 14px; color: #2e9fff;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6l4 2m6-2a10 10 0 1 1-20 0 10 10 0 0 1 20 0z" />
+                </svg>
+                 07/05/2025
               </p>
             </div>
           </article>
-          <article style="background-color: white; border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); overflow: hidden; width: 100%; position: relative;">
+          <article style="background-color: white; overflow: hidden; width: 100%; position: relative;">
             <div style="position: relative; width: 100%;">
               <a href="https://www.sociedademilitar.com.br/2025/05/honda-off-road-e-guerra-motos-que-enfrentam-florestas-desertos-e-ate-missoes-militares-mostram-como-a-marca-japonesa-virou-simbolo-global-de-robustez-e-mobilidade-extrema-fplv.html">
                 <img
@@ -440,25 +649,30 @@
                   style="width: 100%; height: auto; object-fit: cover;"
                 />
               </a>
-              <div style="position: absolute; bottom: 0.5rem; left: 0.5rem; background-color: #2563eb; color: white; font-size: 0.75rem; padding: 0.25rem 0.5rem; border-radius: 0.25rem; text-transform: uppercase; z-index: 10;">
+              <div class="bg-[#2563eb] absolute bottom-2 left-2 px-2 uppercase font-normal tracking-widest text-[11px]" style=" color: white;">
                 <a href="https://www.sociedademilitar.com.br/category/setores-estrategicos/automotivo" style="text-decoration: none; color: white;">
-                  Automotivo
+                  Aviação Militar
                 </a>
               </div>
             </div>
           
-            <div style="padding: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
-              <h3 style="font-size: 1rem; font-weight: 600; text-align: start; color: #1f2937; line-height: 1.375;">
-                <a href="https://www.sociedademilitar.com.br/2025/05/honda-off-road-e-guerra-motos-que-enfrentam-florestas-desertos-e-ate-missoes-militares-mostram-como-a-marca-japonesa-virou-simbolo-global-de-robustez-e-mobilidade-extrema-fplv.html" style="color: #1f2937; text-decoration: none;">
-                  Honda, Off-Road e Guerra: motos que enfrentam florestas, desertos e até missões militares...
+            <div class="flex flex-col items-start text-start gap-2">
+              <h3 class="mt-4 hover:text-[#0067cc] tracking-tighter font-bold transition duration-300 ease-in-out text-[#212121] text-[16px]" >
+                <a
+                class=""
+                href="https://www.sociedademilitar.com.br/2025/05/honda-off-road-e-guerra-motos-que-enfrentam-florestas-desertos-e-ate-missoes-militares-mostram-como-a-marca-japonesa-virou-simbolo-global-de-robustez-e-mobilidade-extrema-fplv.html">
+                 Nova debandada de pilotos da FAB: lista inclui oficial pioneira, piloto do Helicóptero Caracal que atuou em Brumadinho
                 </a>
               </h3>
-              <p style="font-size: 0.75rem; color: #6b7280; margin: 0;">
-                <i style="margin-right: 0.25rem;" class="fa fa-clock-o"></i> 07/05/2025
+              <p class="flex flex-row gap-0.5 items-center justify-center opacity-75 text-[10px] md:text-xs" style="color: #6b7280; margin: 0;">
+                <svg xmlns="http://www.w3.org/2000/svg" style="width: 14px; height: 14px; color: #2e9fff;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6l4 2m6-2a10 10 0 1 1-20 0 10 10 0 0 1 20 0z" />
+                </svg>
+                 07/05/2025
               </p>
             </div>
           </article>
-          <article style="background-color: white; border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); overflow: hidden; width: 100%; position: relative;">
+          <article style="background-color: white; overflow: hidden; width: 100%; position: relative;">
             <div style="position: relative; width: 100%;">
               <a href="https://www.sociedademilitar.com.br/2025/05/honda-off-road-e-guerra-motos-que-enfrentam-florestas-desertos-e-ate-missoes-militares-mostram-como-a-marca-japonesa-virou-simbolo-global-de-robustez-e-mobilidade-extrema-fplv.html">
                 <img
@@ -467,25 +681,30 @@
                   style="width: 100%; height: auto; object-fit: cover;"
                 />
               </a>
-              <div style="position: absolute; bottom: 0.5rem; left: 0.5rem; background-color: #2563eb; color: white; font-size: 0.75rem; padding: 0.25rem 0.5rem; border-radius: 0.25rem; text-transform: uppercase; z-index: 10;">
+              <div class="bg-[#2563eb] absolute bottom-2 left-2 px-2 uppercase font-normal tracking-widest text-[11px]" style=" color: white;">
                 <a href="https://www.sociedademilitar.com.br/category/setores-estrategicos/automotivo" style="text-decoration: none; color: white;">
-                  Automotivo
+                  Aviação Militar
                 </a>
               </div>
             </div>
           
-            <div style="padding: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
-              <h3 style="font-size: 1rem; font-weight: 600; text-align: start; color: #1f2937; line-height: 1.375;">
-                <a href="https://www.sociedademilitar.com.br/2025/05/honda-off-road-e-guerra-motos-que-enfrentam-florestas-desertos-e-ate-missoes-militares-mostram-como-a-marca-japonesa-virou-simbolo-global-de-robustez-e-mobilidade-extrema-fplv.html" style="color: #1f2937; text-decoration: none;">
-                  Honda, Off-Road e Guerra: motos que enfrentam florestas, desertos e até missões militares...
+            <div class="flex flex-col items-start text-start gap-2">
+              <h3 class="mt-4 hover:text-[#0067cc] tracking-tighter font-bold transition duration-300 ease-in-out text-[#212121] text-[16px]" >
+                <a
+                class=""
+                href="https://www.sociedademilitar.com.br/2025/05/honda-off-road-e-guerra-motos-que-enfrentam-florestas-desertos-e-ate-missoes-militares-mostram-como-a-marca-japonesa-virou-simbolo-global-de-robustez-e-mobilidade-extrema-fplv.html">
+                 Nova debandada de pilotos da FAB: lista inclui oficial pioneira, piloto do Helicóptero Caracal que atuou em Brumadinho
                 </a>
               </h3>
-              <p style="font-size: 0.75rem; color: #6b7280; margin: 0;">
-                <i style="margin-right: 0.25rem;" class="fa fa-clock-o"></i> 07/05/2025
+              <p class="flex flex-row gap-0.5 items-center justify-center opacity-75 text-[10px] md:text-xs" style="color: #6b7280; margin: 0;">
+                <svg xmlns="http://www.w3.org/2000/svg" style="width: 14px; height: 14px; color: #2e9fff;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6l4 2m6-2a10 10 0 1 1-20 0 10 10 0 0 1 20 0z" />
+                </svg>
+                 07/05/2025
               </p>
             </div>
           </article>
-          <article style="background-color: white; border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); overflow: hidden; width: 100%; position: relative;">
+          <article style="background-color: white; overflow: hidden; width: 100%; position: relative;">
             <div style="position: relative; width: 100%;">
               <a href="https://www.sociedademilitar.com.br/2025/05/honda-off-road-e-guerra-motos-que-enfrentam-florestas-desertos-e-ate-missoes-militares-mostram-como-a-marca-japonesa-virou-simbolo-global-de-robustez-e-mobilidade-extrema-fplv.html">
                 <img
@@ -494,25 +713,30 @@
                   style="width: 100%; height: auto; object-fit: cover;"
                 />
               </a>
-              <div style="position: absolute; bottom: 0.5rem; left: 0.5rem; background-color: #2563eb; color: white; font-size: 0.75rem; padding: 0.25rem 0.5rem; border-radius: 0.25rem; text-transform: uppercase; z-index: 10;">
+              <div class="bg-[#2563eb] absolute bottom-2 left-2 px-2 uppercase font-normal tracking-widest text-[11px]" style=" color: white;">
                 <a href="https://www.sociedademilitar.com.br/category/setores-estrategicos/automotivo" style="text-decoration: none; color: white;">
-                  Automotivo
+                  Aviação Militar
                 </a>
               </div>
             </div>
           
-            <div style="padding: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
-              <h3 style="font-size: 1rem; font-weight: 600; text-align: start; color: #1f2937; line-height: 1.375;">
-                <a href="https://www.sociedademilitar.com.br/2025/05/honda-off-road-e-guerra-motos-que-enfrentam-florestas-desertos-e-ate-missoes-militares-mostram-como-a-marca-japonesa-virou-simbolo-global-de-robustez-e-mobilidade-extrema-fplv.html" style="color: #1f2937; text-decoration: none;">
-                  Honda, Off-Road e Guerra: motos que enfrentam florestas, desertos e até missões militares...
+            <div class="flex flex-col items-start text-start gap-2">
+              <h3 class="mt-4 hover:text-[#0067cc] tracking-tighter font-bold transition duration-300 ease-in-out text-[#212121] text-[16px]" >
+                <a
+                class=""
+                href="https://www.sociedademilitar.com.br/2025/05/honda-off-road-e-guerra-motos-que-enfrentam-florestas-desertos-e-ate-missoes-militares-mostram-como-a-marca-japonesa-virou-simbolo-global-de-robustez-e-mobilidade-extrema-fplv.html">
+                 Nova debandada de pilotos da FAB: lista inclui oficial pioneira, piloto do Helicóptero Caracal que atuou em Brumadinho
                 </a>
               </h3>
-              <p style="font-size: 0.75rem; color: #6b7280; margin: 0;">
-                <i style="margin-right: 0.25rem;" class="fa fa-clock-o"></i> 07/05/2025
+              <p class="flex flex-row gap-0.5 items-center justify-center opacity-75 text-[10px] md:text-xs" style="color: #6b7280; margin: 0;">
+                <svg xmlns="http://www.w3.org/2000/svg" style="width: 14px; height: 14px; color: #2e9fff;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6l4 2m6-2a10 10 0 1 1-20 0 10 10 0 0 1 20 0z" />
+                </svg>
+                 07/05/2025
               </p>
             </div>
           </article>
-          <article style="background-color: white; border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); overflow: hidden; width: 100%; position: relative;">
+          <article style="background-color: white; overflow: hidden; width: 100%; position: relative;">
             <div style="position: relative; width: 100%;">
               <a href="https://www.sociedademilitar.com.br/2025/05/honda-off-road-e-guerra-motos-que-enfrentam-florestas-desertos-e-ate-missoes-militares-mostram-como-a-marca-japonesa-virou-simbolo-global-de-robustez-e-mobilidade-extrema-fplv.html">
                 <img
@@ -521,25 +745,30 @@
                   style="width: 100%; height: auto; object-fit: cover;"
                 />
               </a>
-              <div style="position: absolute; bottom: 0.5rem; left: 0.5rem; background-color: #2563eb; color: white; font-size: 0.75rem; padding: 0.25rem 0.5rem; border-radius: 0.25rem; text-transform: uppercase; z-index: 10;">
+              <div class="bg-[#2563eb] absolute bottom-2 left-2 px-2 uppercase font-normal tracking-widest text-[11px]" style=" color: white;">
                 <a href="https://www.sociedademilitar.com.br/category/setores-estrategicos/automotivo" style="text-decoration: none; color: white;">
-                  Automotivo
+                  Aviação Militar
                 </a>
               </div>
             </div>
           
-            <div style="padding: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
-              <h3 style="font-size: 1rem; font-weight: 600; text-align: start; color: #1f2937; line-height: 1.375;">
-                <a href="https://www.sociedademilitar.com.br/2025/05/honda-off-road-e-guerra-motos-que-enfrentam-florestas-desertos-e-ate-missoes-militares-mostram-como-a-marca-japonesa-virou-simbolo-global-de-robustez-e-mobilidade-extrema-fplv.html" style="color: #1f2937; text-decoration: none;">
-                  Honda, Off-Road e Guerra: motos que enfrentam florestas, desertos e até missões militares...
+            <div class="flex flex-col items-start text-start gap-2">
+              <h3 class="mt-4 hover:text-[#0067cc] tracking-tighter font-bold transition duration-300 ease-in-out text-[#212121] text-[16px]" >
+                <a
+                class=""
+                href="https://www.sociedademilitar.com.br/2025/05/honda-off-road-e-guerra-motos-que-enfrentam-florestas-desertos-e-ate-missoes-militares-mostram-como-a-marca-japonesa-virou-simbolo-global-de-robustez-e-mobilidade-extrema-fplv.html">
+                 Nova debandada de pilotos da FAB: lista inclui oficial pioneira, piloto do Helicóptero Caracal que atuou em Brumadinho
                 </a>
               </h3>
-              <p style="font-size: 0.75rem; color: #6b7280; margin: 0;">
-                <i style="margin-right: 0.25rem;" class="fa fa-clock-o"></i> 07/05/2025
+              <p class="flex flex-row gap-0.5 items-center justify-center opacity-75 text-[10px] md:text-xs" style="color: #6b7280; margin: 0;">
+                <svg xmlns="http://www.w3.org/2000/svg" style="width: 14px; height: 14px; color: #2e9fff;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6l4 2m6-2a10 10 0 1 1-20 0 10 10 0 0 1 20 0z" />
+                </svg>
+                 07/05/2025
               </p>
             </div>
           </article>
-          <article style="background-color: white; border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); overflow: hidden; width: 100%; position: relative;">
+          <article style="background-color: white; overflow: hidden; width: 100%; position: relative;">
             <div style="position: relative; width: 100%;">
               <a href="https://www.sociedademilitar.com.br/2025/05/honda-off-road-e-guerra-motos-que-enfrentam-florestas-desertos-e-ate-missoes-militares-mostram-como-a-marca-japonesa-virou-simbolo-global-de-robustez-e-mobilidade-extrema-fplv.html">
                 <img
@@ -548,197 +777,117 @@
                   style="width: 100%; height: auto; object-fit: cover;"
                 />
               </a>
-              <div style="position: absolute; bottom: 0.5rem; left: 0.5rem; background-color: #2563eb; color: white; font-size: 0.75rem; padding: 0.25rem 0.5rem; border-radius: 0.25rem; text-transform: uppercase; z-index: 10;">
+              <div class="bg-[#2563eb] absolute bottom-2 left-2 px-2 uppercase font-normal tracking-widest text-[11px]" style=" color: white;">
                 <a href="https://www.sociedademilitar.com.br/category/setores-estrategicos/automotivo" style="text-decoration: none; color: white;">
-                  Automotivo
+                  Aviação Militar
                 </a>
               </div>
             </div>
           
-            <div style="padding: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
-              <h3 style="font-size: 1rem; font-weight: 600; text-align: start; color: #1f2937; line-height: 1.375;">
-                <a href="https://www.sociedademilitar.com.br/2025/05/honda-off-road-e-guerra-motos-que-enfrentam-florestas-desertos-e-ate-missoes-militares-mostram-como-a-marca-japonesa-virou-simbolo-global-de-robustez-e-mobilidade-extrema-fplv.html" style="color: #1f2937; text-decoration: none;">
-                  Honda, Off-Road e Guerra: motos que enfrentam florestas, desertos e até missões militares...
+            <div class="flex flex-col items-start text-start gap-2">
+              <h3 class="mt-4 hover:text-[#0067cc] tracking-tighter font-bold transition duration-300 ease-in-out text-[#212121] text-[16px]" >
+                <a
+                class=""
+                href="https://www.sociedademilitar.com.br/2025/05/honda-off-road-e-guerra-motos-que-enfrentam-florestas-desertos-e-ate-missoes-militares-mostram-como-a-marca-japonesa-virou-simbolo-global-de-robustez-e-mobilidade-extrema-fplv.html">
+                 Nova debandada de pilotos da FAB: lista inclui oficial pioneira, piloto do Helicóptero Caracal que atuou em Brumadinho
                 </a>
               </h3>
-              <p style="font-size: 0.75rem; color: #6b7280; margin: 0;">
-                <i style="margin-right: 0.25rem;" class="fa fa-clock-o"></i> 07/05/2025
+              <p class="flex flex-row gap-0.5 items-center justify-center opacity-75 text-[10px] md:text-xs" style="color: #6b7280; margin: 0;">
+                <svg xmlns="http://www.w3.org/2000/svg" style="width: 14px; height: 14px; color: #2e9fff;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6l4 2m6-2a10 10 0 1 1-20 0 10 10 0 0 1 20 0z" />
+                </svg>
+                 07/05/2025
               </p>
             </div>
           </article>
-          <article style="background-color: white; border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); overflow: hidden; width: 100%; position: relative;">
-            <div style="position: relative; width: 100%;">
-              <a href="https://www.sociedademilitar.com.br/2025/05/honda-off-road-e-guerra-motos-que-enfrentam-florestas-desertos-e-ate-missoes-militares-mostram-como-a-marca-japonesa-virou-simbolo-global-de-robustez-e-mobilidade-extrema-fplv.html">
-                <img
-                  src="https://www.sociedademilitar.com.br/wp-content/uploads/2025/05/a-photograph-of-a-rugged-honda-crf-motor_CE0AkfAFQZuT0sKbGRr22A_na-hSg4dTtOEcO6H-XgSng-350x250.jpeg"
-                  alt="Honda, Off-Road e Guerra"
-                  style="width: 100%; height: auto; object-fit: cover;"
-                />
-              </a>
-              <div style="position: absolute; bottom: 0.5rem; left: 0.5rem; background-color: #2563eb; color: white; font-size: 0.75rem; padding: 0.25rem 0.5rem; border-radius: 0.25rem; text-transform: uppercase; z-index: 10;">
-                <a href="https://www.sociedademilitar.com.br/category/setores-estrategicos/automotivo" style="text-decoration: none; color: white;">
-                  Automotivo
-                </a>
-              </div>
-            </div>
-          
-            <div style="padding: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
-              <h3 style="font-size: 1rem; font-weight: 600; text-align: start; color: #1f2937; line-height: 1.375;">
-                <a href="https://www.sociedademilitar.com.br/2025/05/honda-off-road-e-guerra-motos-que-enfrentam-florestas-desertos-e-ate-missoes-militares-mostram-como-a-marca-japonesa-virou-simbolo-global-de-robustez-e-mobilidade-extrema-fplv.html" style="color: #1f2937; text-decoration: none;">
-                  Honda, Off-Road e Guerra: motos que enfrentam florestas, desertos e até missões militares...
-                </a>
-              </h3>
-              <p style="font-size: 0.75rem; color: #6b7280; margin: 0;">
-                <i style="margin-right: 0.25rem;" class="fa fa-clock-o"></i> 07/05/2025
-              </p>
-            </div>
-          </article>
-          <article style="background-color: white; border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); overflow: hidden; width: 100%; position: relative;">
-            <div style="position: relative; width: 100%;">
-              <a href="https://www.sociedademilitar.com.br/2025/05/honda-off-road-e-guerra-motos-que-enfrentam-florestas-desertos-e-ate-missoes-militares-mostram-como-a-marca-japonesa-virou-simbolo-global-de-robustez-e-mobilidade-extrema-fplv.html">
-                <img
-                  src="https://www.sociedademilitar.com.br/wp-content/uploads/2025/05/a-photograph-of-a-rugged-honda-crf-motor_CE0AkfAFQZuT0sKbGRr22A_na-hSg4dTtOEcO6H-XgSng-350x250.jpeg"
-                  alt="Honda, Off-Road e Guerra"
-                  style="width: 100%; height: auto; object-fit: cover;"
-                />
-              </a>
-              <div style="position: absolute; bottom: 0.5rem; left: 0.5rem; background-color: #2563eb; color: white; font-size: 0.75rem; padding: 0.25rem 0.5rem; border-radius: 0.25rem; text-transform: uppercase; z-index: 10;">
-                <a href="https://www.sociedademilitar.com.br/category/setores-estrategicos/automotivo" style="text-decoration: none; color: white;">
-                  Automotivo
-                </a>
-              </div>
-            </div>
-          
-            <div style="padding: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
-              <h3 style="font-size: 1rem; font-weight: 600; text-align: start; color: #1f2937; line-height: 1.375;">
-                <a href="https://www.sociedademilitar.com.br/2025/05/honda-off-road-e-guerra-motos-que-enfrentam-florestas-desertos-e-ate-missoes-militares-mostram-como-a-marca-japonesa-virou-simbolo-global-de-robustez-e-mobilidade-extrema-fplv.html" style="color: #1f2937; text-decoration: none;">
-                  Honda, Off-Road e Guerra: motos que enfrentam florestas, desertos e até missões militares...
-                </a>
-              </h3>
-              <p style="font-size: 0.75rem; color: #6b7280; margin: 0;">
-                <i style="margin-right: 0.25rem;" class="fa fa-clock-o"></i> 07/05/2025
-              </p>
-            </div>
-          </article>
-          <article style="background-color: white; border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); overflow: hidden; width: 100%; position: relative;">
-            <div style="position: relative; width: 100%;">
-              <a href="https://www.sociedademilitar.com.br/2025/05/honda-off-road-e-guerra-motos-que-enfrentam-florestas-desertos-e-ate-missoes-militares-mostram-como-a-marca-japonesa-virou-simbolo-global-de-robustez-e-mobilidade-extrema-fplv.html">
-                <img
-                  src="https://www.sociedademilitar.com.br/wp-content/uploads/2025/05/a-photograph-of-a-rugged-honda-crf-motor_CE0AkfAFQZuT0sKbGRr22A_na-hSg4dTtOEcO6H-XgSng-350x250.jpeg"
-                  alt="Honda, Off-Road e Guerra"
-                  style="width: 100%; height: auto; object-fit: cover;"
-                />
-              </a>
-              <div style="position: absolute; bottom: 0.5rem; left: 0.5rem; background-color: #2563eb; color: white; font-size: 0.75rem; padding: 0.25rem 0.5rem; border-radius: 0.25rem; text-transform: uppercase; z-index: 10;">
-                <a href="https://www.sociedademilitar.com.br/category/setores-estrategicos/automotivo" style="text-decoration: none; color: white;">
-                  Automotivo
-                </a>
-              </div>
-            </div>
-          
-            <div style="padding: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
-              <h3 style="font-size: 1rem; font-weight: 600; text-align: start; color: #1f2937; line-height: 1.375;">
-                <a href="https://www.sociedademilitar.com.br/2025/05/honda-off-road-e-guerra-motos-que-enfrentam-florestas-desertos-e-ate-missoes-militares-mostram-como-a-marca-japonesa-virou-simbolo-global-de-robustez-e-mobilidade-extrema-fplv.html" style="color: #1f2937; text-decoration: none;">
-                  Honda, Off-Road e Guerra: motos que enfrentam florestas, desertos e até missões militares...
-                </a>
-              </h3>
-              <p style="font-size: 0.75rem; color: #6b7280; margin: 0;">
-                <i style="margin-right: 0.25rem;" class="fa fa-clock-o"></i> 07/05/2025
-              </p>
-            </div>
-          </article>
-          <article style="background-color: white; border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); overflow: hidden; width: 100%; position: relative;">
-            <div style="position: relative; width: 100%;">
-              <a href="https://www.sociedademilitar.com.br/2025/05/honda-off-road-e-guerra-motos-que-enfrentam-florestas-desertos-e-ate-missoes-militares-mostram-como-a-marca-japonesa-virou-simbolo-global-de-robustez-e-mobilidade-extrema-fplv.html">
-                <img
-                  src="https://www.sociedademilitar.com.br/wp-content/uploads/2025/05/a-photograph-of-a-rugged-honda-crf-motor_CE0AkfAFQZuT0sKbGRr22A_na-hSg4dTtOEcO6H-XgSng-350x250.jpeg"
-                  alt="Honda, Off-Road e Guerra"
-                  style="width: 100%; height: auto; object-fit: cover;"
-                />
-              </a>
-              <div style="position: absolute; bottom: 0.5rem; left: 0.5rem; background-color: #2563eb; color: white; font-size: 0.75rem; padding: 0.25rem 0.5rem; border-radius: 0.25rem; text-transform: uppercase; z-index: 10;">
-                <a href="https://www.sociedademilitar.com.br/category/setores-estrategicos/automotivo" style="text-decoration: none; color: white;">
-                  Automotivo
-                </a>
-              </div>
-            </div>
-          
-            <div style="padding: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
-              <h3 style="font-size: 1rem; font-weight: 600; text-align: start; color: #1f2937; line-height: 1.375;">
-                <a href="https://www.sociedademilitar.com.br/2025/05/honda-off-road-e-guerra-motos-que-enfrentam-florestas-desertos-e-ate-missoes-militares-mostram-como-a-marca-japonesa-virou-simbolo-global-de-robustez-e-mobilidade-extrema-fplv.html" style="color: #1f2937; text-decoration: none;">
-                  Honda, Off-Road e Guerra: motos que enfrentam florestas, desertos e até missões militares...
-                </a>
-              </h3>
-              <p style="font-size: 0.75rem; color: #6b7280; margin: 0;">
-                <i style="margin-right: 0.25rem;" class="fa fa-clock-o"></i> 07/05/2025
-              </p>
-            </div>
-          </article>
+
+         
+        </div>
+        <div class="flex w-full justify-center lg:py-24 py-20">
+          <div class="flex justify-center items-center w-[32%] lg:min-w-[30%] h-[30px] border  border-gray-300 hover:bg-[#0067cc] hover:text-white transition duration-300 ease-in-out rounded-sm">
+            <button class="lg:text-[12px] text-[10px] font-medium lg:font-normal tracking-wider opacity-85">CARREGAR MAIS</button>
+          </div>
         </div>
       </section>
 
       <footer>
-          <div class="max-w-7xl mx-auto px-4">
+          <div class="w-fulll lg:max-w-[1280px] bg-[#f5f5f5] lg:py-3 py-5 mx-auto">
             <div
-              class="flex flex-col lg:flex-row lg:justify-between lg:items-start space-y-6"
+              class="flex flex-col lg:flex-row lg:justify-between lg:ml-24 lg:items-start space-y-7"
             >
-              <div class="w-full lg:w-9/12 flex flex-col items-center">
+              <div class="w-full lg:w-9/12 lg:justify-start flex flex-row justify-center  items-center ">
                 <ul
-                  class="flex flex-wrap justify-center gap-x-4 gap-y-2 text-sm mb-2"
+                  class="flex flex-wrap justify-center  lg:gap-x-4 gap-x-5  text-[13px] "
                 >
                   <li>
                     <a
                       href="https://www.sociedademilitar.com.br/sobre"
-                      class="hover:underline"
+                      class=""
                       >Sobre nós</a
                     >
                   </li>
                   <li>
                     <a
                       href="https://www.sociedademilitar.com.br/contato"
-                      class="hover:underline"
+                      class=""
                       >Contato</a
                     >
                   </li>
                   <li>
                     <a
                       href="https://www.sociedademilitar.com.br/anuncie"
-                      class="hover:underline"
+                      class=""
                       >Anuncie</a
                     >
                   </li>
+                  <li>
+                    <a
+                      href="https://www.sociedademilitar.com.br/privacidade"
+                      class=""
+                      >Política de Privacidade e Cookies</a
+                    >
+                  </li>
                 </ul>
-
-                <div class="text-sm text-center">
-                  <a
-                    href="https://www.sociedademilitar.com.br/privacidade"
-                    class="hover:underline"
-                    >Política de Privacidade e Cookies</a
-                  >
-                </div>
               </div>
-
+  
             
               <div
-                class="w-full lg:w-3/12 text-sm leading-relaxed text-center lg:text-end"
-              >
-                <p>
-                  - Informações sobre artigos, denúncias, e erros: WhatsApp 21
-                  96455 7653 (só WhatsApp / texto)
-                </p>
-                <p>
-                  - Contato comercial/publicidade/urgências: 21 98106 2723 e
-                  <a
-                    href="/cdn-cgi/l/email-protection"
-                    class="text-blue-400 hover:underline"
-                    >[email&nbsp;protected]</a
-                  >
-                </p>
+              class="flex gap-x-5 lg:flex-row lg:w-[380px] lg:text-sm text-[14px] w-full leading-relaxed text-end items-end lg:pr-8 lg:text-start opacity-65 pb-2"
+            >
+            <p class="xl:text-end text-center">
+              - Informações sobre artigos, denúncias, e erros: WhatsApp 21 96455 7653 não atendemos ligação.(Só whatsapp / texto)
+              - Contato comercial/publicidade/urgências: 21 98106 2723 e 
+              98106 2723 e comercial@sociedademilitar.com.br
+            </p>
+          
+              <p class="hidden lg:w-[400px] lg:text-end">
+                - Informações sobre artigos, denúncias, e erros: WhatsApp 21 96455 7653 não atendemos ligação. (Só whatsapp / texto)
+                - Contato <br />
+                comercial/publicidade/urgências: 21 <br />
+                98106 2723 e comercial@sociedademilitar.com.br
+              </p>
+            
+              <div class="lg:flex lg:flex-col lg:items-end lg:justify-between hidden">
+                <div class="mt-auto ">
+                  <button class="bg-[#a0a0a0]/10 border-[1.7px] hover:bg-[#a0a0a0]/25 items-center justify-center flex border-gray-300 w-[45px] h-[45px] text-zinc-500 rounded">
+                    <svg xmlns="http://www.w3.org/2000/svg" 
+                      fill="none" 
+                      viewBox="0 0 24 24" 
+                      stroke="currentColor" 
+                      stroke-width="2" 
+                      class="font-bold w-8 h-8"
+                      style=" color: #a0a0a0;">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                  </svg>
+                  </button>
+                </div>
               </div>
+            </div>
             </div>
           </div>
         </div>
       </footer>
     </section>
+    <script src="./src/assets/js/sidebar.js" defer></script>
   </body>
 </html>

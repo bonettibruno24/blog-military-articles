@@ -20,6 +20,7 @@ The application consists of 4 main routes:
 
 ## 📁 Project Structure
 
+```plaintext
 blog-military-responsive-two-pages-main-article/
 │
 ├── index.html
@@ -29,24 +30,20 @@ blog-military-responsive-two-pages-main-article/
 ├── styles.css
 │
 ├── src/
-│ ├── article.html
-│ ├── categories.html
-│ ├── search-result.html
-│ ├── output.css
-│ └── assets/
-│ ├── css/
-│ └── js/
-│ ├── articles-data.js
-│ ├── category-articles.js
-│ ├── footer-component.js
-│ ├── header-component.js
-│ ├── main.js
-│ ├── recent-articles.js
-│ └── sidebar.js
-
-markdown
-Copiar
-Editar
+│   ├── article.html
+│   ├── categories.html
+│   ├── search-result.html
+│   └── assets/
+│       ├── css/
+│       ├── output.css
+│       └── js/
+│           ├── articles-data.js
+│           ├── category-articles.js
+│           ├── footer-component.js
+│           ├── header-component.js
+│           ├── main.js
+│           ├── recent-articles.js
+│           └── sidebar.js
 
 ## 🧩 Components
 
